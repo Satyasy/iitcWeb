@@ -11,13 +11,13 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('events', function (Blueprint $table) {
-            $table->id();
+            $table->id('event_id');
             $table->string('nama');
-            $table->string('deskripsi');
-            $table->dateTime('jadwal');
-            $table->float('harga_tiket');
+            $table->text('deskripsi');
+            $table->timestamp('jadwal');
+            $table->decimal('harga_tiket', 12, 2);
             // Foreign key constraint
-            $table->foreignId('lokasi_id')->constrained('lokasis')->onDelete('cascade');
+            $table->foreignId('lokasi_id')->constrained('lokasis', 'id')->onDelete('cascade');
             $table->timestamps();
         });
     }

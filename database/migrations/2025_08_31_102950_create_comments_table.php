@@ -11,10 +11,10 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->id();
+            $table->id('comment_id');
             $table->text('isi');
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('artikel_id')->constrained('artikels')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users', 'id')->onDelete('cascade');
+            $table->foreignId('artikel_id')->constrained('artikels', 'id')->onDelete('cascade');
             $table->timestamps();
         });
     }

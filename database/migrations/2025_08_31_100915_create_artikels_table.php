@@ -11,14 +11,14 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('artikels', function (Blueprint $table) {
-            $table->id();
+            $table->id('artikel_id');
             $table->string('judul');
-            $table->string('deskripsi');
+            $table->text('deskripsi');
             $table->string('penulis');
             $table->string('topic');
             // Foreign key constraint
             $table->foreignId('user_id')->constrained('users', 'id')->onDelete('cascade');
-            $table->foreignId('budaya_id')->constrained('budayas', 'id')->onDelete('set null');
+            $table->foreignId('budaya_id')->nullable()->constrained('budayas', 'id')->onDelete('set null');
             $table->timestamps();
         });
     }
