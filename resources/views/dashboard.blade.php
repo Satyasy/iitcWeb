@@ -7,6 +7,8 @@
    <title>Document</title>
 </head>
 <body>
-   
+ @guest
+    
+ @endguest
 </body>
 </html>

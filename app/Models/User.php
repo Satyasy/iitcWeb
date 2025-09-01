@@ -45,4 +45,17 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function budaya()
+    {
+        return $this->hasMany(Budaya::class, 'user_id', 'user_id');
+    }
+    public function artikel()
+    {
+        return $this->hasMany(Artikel::class, 'user_id', 'user_id');
+    }
+    public function comment()
+    {
+        return $this->hasMany(Comment::class, 'user_id', 'user_id');
+    }
 }
