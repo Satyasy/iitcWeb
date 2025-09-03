@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('lokasis', function (Blueprint $table) {
-            $table->id('lokasi_id');
+            $table->increments('lokasi_id');
             $table->string('nama');
             $table->string('alamat');
             $table->timestamps();

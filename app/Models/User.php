@@ -19,9 +19,9 @@ class User extends Authenticatable
         'password',
     ];
 
-    public function articles()
+    public function artikels()
     {
-        return $this->hasMany(Article::class, 'user_id', 'user_id');
+        return $this->hasMany(Artikel::class, 'user_id', 'user_id');
     }
 
     public function comments()

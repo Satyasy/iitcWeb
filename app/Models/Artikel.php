@@ -2,19 +2,35 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Artikel extends Model
 {
-    protected $primaryKey = 'artikel_id';
-    protected $fillable = ['judul', 'deskripsi', 'topic', 'image', 'user_id', 'budaya_id'];
+    use HasFactory;
 
-    public function budaya()
+    protected $table = 'artikels'; // singular sesuai migration
+    protected $primaryKey = 'artikel_id';
+
+    protected $fillable = [
+        'title',
+        'content',
+        'user_id',
+        'budaya_id',
+    ];
+
+    public function users()
     {
-        return $this->hasMany(Budaya::class, 'budaya_id', 'budaya_id');
+        return $this->belongsTo(User::class, 'user_id', 'user_id');
     }
-    public function user()
+
+    public function budayas()
     {
-        return $this->hasMany(User::class, 'user_id', 'user_id');
+        return $this->belongsTo(Budaya::class, 'budaya_id', 'budaya_id');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class, 'artikel_id', 'artikel_id');
     }
 }

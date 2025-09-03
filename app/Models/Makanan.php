@@ -2,19 +2,24 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Makanan extends Model
 {
+    use HasFactory;
 
+    protected $table = 'makanans';
     protected $primaryKey = 'makanan_id';
-    protected $fillable = ['nama_makanan', 'deskripsi', 'image', 'lokasi_id', 'user_id'];
-    public function user()
+
+    protected $fillable = [
+        'nama',
+        'deskripsi',
+        'lokasi_id',
+    ];
+
+    public function lokasis()
     {
-        return $this->hasMany(User::class, 'user_id', 'user_id');
-    }
-    public function lokasi()
-    {
-        return $this->hasMany(Lokasi::class, 'lokasi', 'lokasi_id');
+        return $this->belongsTo(Lokasi::class, 'lokasi_id', 'lokasi_id');
     }
 }

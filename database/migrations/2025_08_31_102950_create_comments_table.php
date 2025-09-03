@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->id('comment_id');
+            $table->increments('comment_id');
             $table->text('comment');
             $table->foreignId('user_id')->constrained('users', 'user_id')->onDelete('cascade');
             $table->foreignId('artikel_id')->nullable()->constrained('artikels', 'artikel_id')->onDelete('cascade');

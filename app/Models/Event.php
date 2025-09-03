@@ -2,16 +2,24 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
+    use HasFactory;
+
+    protected $table = 'events'; // singular
     protected $primaryKey = 'event_id';
-    protected $fillable = ['nama_event', 'jadwal', 'deskripsi', 'harga', 'lokasi_id'];
 
+    protected $fillable = [
+        'nama',
+        'tanggal',
+        'lokasi_id',
+    ];
 
-    public function lokasi()
+    public function lokasis()
     {
-        return $this->hasMany(Lokasi::class, 'lokasi_id', 'lokasi_id');
+        return $this->belongsTo(Lokasi::class, 'lokasi_id', 'lokasi_id');
     }
 }
