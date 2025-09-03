@@ -1,19 +1,14 @@
-/* resources/css/welcome.css */
-
-/* --- Variabel CSS --- */
 :root {
     --nusaya-green: #4CB073;
     --nusaya-text: #395B3B;
     --nusaya-bg: #F7F7F0;
     --nusaya-light-green: #E5F0D9;
 
-    /* Warna aura dan teks yang baru */
     --aura-blue: #40567F;
     --aura-green: #33675B;
     --nusaya-dark-blue: #191D43; 
 }
 
-/* --- Styling Utama Halaman Landing --- */
 body {
     background-color: white; 
 }
@@ -46,7 +41,6 @@ body {
     border-radius: 2px;
 }
 
-/* --- Hero Section --- */
 .hero-section {
     display: flex;
     flex-direction: column;
@@ -109,7 +103,6 @@ body {
         0 0 25px var(--aura-green);
 }
 
-/* --- Tombol Interaktif Gradien --- */
 .btn-interactive {
     display: inline-block;
     font-weight: 600;
@@ -147,7 +140,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* --- Section Explore --- */
 .explore-section {
     padding: 40px 16px;
     text-align: center;
@@ -211,12 +203,11 @@ body {
     text-align: center;
 }
 
-/* --- Perbaikan Section Konten dengan Kartu --- */
 .content-section {
     padding: 40px 16px;
     background-color: white;
-    box-sizing: border-box; /* Memastikan padding tidak mempengaruhi lebar */
-    max-width: 1000px; /* Ukuran yang ideal untuk konten di tengah */
+    box-sizing: border-box;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -229,7 +220,7 @@ body {
 
 .content-cards-container {
     display: flex;
-    flex-direction: column; /* Mengatur tumpukan kartu secara vertikal */
+    flex-direction: column;
     gap: 24px;
 }
 
@@ -237,10 +228,10 @@ body {
     background-color: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bayangan yang lebih kuat */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    display: flex; /* Untuk layout gambar dan teks di dalam kartu */
-    flex-direction: column; /* Mengatur gambar di atas dan teks di bawah */
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
@@ -250,7 +241,7 @@ body {
 
 .card-image-box {
     width: 100%;
-    height: 200px; /* Tinggi gambar yang konsisten */
+    height: 200px;
     overflow: hidden;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -272,7 +263,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Teks dan tombol di tengah */
+    align-items: center;
     text-align: center;
 }
 
@@ -289,7 +280,6 @@ body {
     margin-bottom: 16px;
 }
 
-/* --- About Us Section --- */
 .about-us-section {
     padding: 40px 16px;
     text-align: center;
@@ -316,9 +306,7 @@ body {
     margin: 0 auto;
 }
 
-/* --- Media Queries untuk Responsif --- */
 @media (min-width: 768px) {
-    /* Hero section */
     .hero-section {
         flex-direction: row;
         justify-content: space-between;
@@ -342,34 +330,31 @@ body {
         font-size: 3rem;
     }
 
-    /* Explore Section */
     .explore-section {
         padding: 64px 32px;
     }
 
-    /* Content Section */
     .content-section {
         padding: 64px 32px;
     }
     
     .content-cards-container {
-        flex-direction: column; /* Tetap vertikal di tablet */
+        flex-direction: column;
     }
 
-    /* Card Layout di Tablet dan Desktop */
     .card {
-        flex-direction: row; /* Kembali ke tata letak horizontal untuk tablet ke atas */
+        flex-direction: row;
         text-align: left;
         align-items: center;
     }
 
     .card:nth-child(even) {
-        flex-direction: row-reverse; /* Mengatur kartu genap untuk tata letak bolak-balik */
+        flex-direction: row-reverse;
     }
 
     .card-image-box {
         width: 50%;
-        height: 280px; /* Tinggi yang lebih besar di tablet/desktop */
+        height: 280px;
         border-radius: 0;
         border-top-left-radius: 12px;
         border-bottom-left-radius: 12px;

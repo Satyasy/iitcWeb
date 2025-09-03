@@ -43,7 +43,7 @@
                 <img src="{{ asset('images/welcome_asset/exploresec3.png') }}" alt="Event" class="category-icon">
                 <span class="category-name">Event</span>
             </a>
-            <a href="/budaya/artikel" class="category-item">
+            <a href="/explore/artikel" class="category-item">
                 <img src="{{ asset('images/welcome_asset/exploresec4.png') }}" alt="Artikel" class="category-icon">
                 <span class="category-name">Artikel</span>
             </a>
@@ -60,7 +60,6 @@
             <span class="title-underline"></span>
         </h2>
         <div class="content-cards-container">
-            {{-- Kartu Ragam Budaya --}}
             <div class="card">
                 <div class="card-image-box">
                     <img src="{{ asset('images/welcome_asset/jelajahsec1.png') }}" alt="Ragam Budaya" class="card-image">
@@ -70,11 +69,10 @@
                     <p class="card-description">
                         Kenali macam-macam suku, tarian, adat istiadat, dan warisan budaya yang tersebar di seluruh Indonesia.
                     </p>
-                    <a href="/budaya" class="btn-secondary">Jelajahi Sekarang</a>
+                    <a href="/explore" class="btn-secondary">Jelajahi Sekarang</a>
                 </div>
             </div>
             
-            {{-- Kartu Kuliner --}}
             <div class="card">
                 <div class="card-image-box">
                     <img src="{{ asset('images/welcome_asset/jelajahsec2.png') }}" alt="Kuliner" class="card-image">
@@ -84,11 +82,10 @@
                     <p class="card-description">
                         Cicipi dan jelajahi berbagai macam kuliner lezat yang penuh dengan sejarah dan keunikan di Indonesia.
                     </p>
-                    <a href="/kuliner" class="btn-secondary">Jelajahi Sekarang</a>
+                    <a href="/explore" class="btn-secondary">Jelajahi Sekarang</a>
                 </div>
             </div>
 
-            {{-- Kartu Event --}}
             <div class="card">
                 <div class="card-image-box">
                     <img src="{{ asset('images/welcome_asset/jelajahsec3.png') }}" alt="Event" class="card-image">
@@ -98,11 +95,10 @@
                     <p class="card-description">
                         Informasi lengkap tentang event seni dan budaya yang sedang berlangsung atau akan datang di daerahmu.
                     </p>
-                    <a href="/event" class="btn-secondary">Jelajahi Sekarang</a>
+                    <a href="/explore" class="btn-secondary">Jelajahi Sekarang</a>
                 </div>
             </div>
 
-            {{-- Kartu Artikel --}}
             <div class="card">
                 <div class="card-image-box">
                     <img src="{{ asset('images/welcome_asset/jelajahsec4.png') }}" alt="Artikel" class="card-image">
@@ -112,11 +108,10 @@
                     <p class="card-description">
                         Baca artikel menarik seputar sejarah, tradisi, dan cerita unik dari berbagai daerah di Indonesia.
                     </p>
-                    <a href="/artikel" class="btn-secondary">Jelajahi Sekarang</a>
+                    <a href="/explore" class="btn-secondary">Jelajahi Sekarang</a>
                 </div>
             </div>
 
-            {{-- Kartu Pustaka --}}
             <div class="card">
                 <div class="card-image-box">
                     <img src="{{ asset('images/welcome_asset/jelajahsec5.png') }}" alt="Pustaka" class="card-image">
@@ -126,7 +121,7 @@
                     <p class="card-description">
                         Kumpulan buku, jurnal, dan karya tulis lain yang mendalam tentang kekayaan budaya dan sejarah.
                     </p>
-                    <a href="/pustaka" class="btn-secondary">Jelajahi Sekarang</a>
+                    <a href="explore" class="btn-secondary">Jelajahi Sekarang</a>
                 </div>
             </div>
         </div>
