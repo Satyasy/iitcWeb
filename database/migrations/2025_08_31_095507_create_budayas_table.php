@@ -18,7 +18,6 @@ return new class extends Migration {
             $table->text('deskripsi');
             $table->string('asal_daerah');
             $table->enum('status', ['aktif', 'hampir punah', 'punah'])->default('aktif');
-            // Foreign key constraint
             $table->timestamps();
         });
     }
