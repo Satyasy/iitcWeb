@@ -18,6 +18,15 @@
                 <a href="/explore" class="nav-link">Explore</a>
                 <a href="/budaya" class="nav-link">Budaya</a>
                 @guest
+                    <a href="/login" class="btn-login-mobile">Login</a>
+                @endguest
+                @auth
+                    <a href="/profile" class="btn-login-mobile">Profile</a>
+                @endauth
+            </div>
+
+            <div class="btn-login-desktop">
+                @guest
                     <a href="/login" class="btn-login">Login</a>
                 @endguest
                 @auth
