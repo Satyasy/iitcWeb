@@ -14,8 +14,8 @@ return new class extends Migration {
             $table->id('makanan_id');
             $table->string('nama');
             $table->text('deskripsi');
-            $table->foreignId('lokasi_id')->constrained('lokasis', 'id')->onDelete('cascade');
-            $table->foreignId('user_id')->constrained('users', 'id')->onDelete('cascade');
+            $table->foreignId('lokasi_id')->constrained('lokasis', 'lokasi_id')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users', 'user_id')->onDelete('cascade');
             $table->timestamps();
         });
     }

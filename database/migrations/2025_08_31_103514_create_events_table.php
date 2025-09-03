@@ -16,8 +16,7 @@ return new class extends Migration {
             $table->text('deskripsi');
             $table->timestamp('jadwal');
             $table->decimal('harga_tiket', 12, 2);
-            // Foreign key constraint
-            $table->foreignId('lokasi_id')->constrained('lokasis', 'id')->onDelete('cascade');
+            $table->foreignId('lokasi_id')->constrained('lokasis', 'lokasi_id')->onDelete('cascade');
             $table->timestamps();
         });
     }

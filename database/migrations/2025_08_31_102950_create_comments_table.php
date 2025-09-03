@@ -12,9 +12,9 @@ return new class extends Migration {
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id('comment_id');
-            $table->text('isi');
-            $table->foreignId('user_id')->constrained('users', 'id')->onDelete('cascade');
-            $table->foreignId('artikel_id')->constrained('artikels', 'id')->onDelete('cascade');
+            $table->text('comment');
+            $table->foreignId('user_id')->constrained('users', 'user_id')->onDelete('cascade');
+            $table->foreignId('artikel_id')->nullable()->constrained('artikels', 'artikel_id')->onDelete('cascade');
             $table->timestamps();
         });
     }

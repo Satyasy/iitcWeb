@@ -12,13 +12,12 @@ return new class extends Migration {
     {
         Schema::create('budayas', function (Blueprint $table) {
             $table->id('budaya_id');
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users', 'user_id')->onDelete('cascade');
             $table->string('name');
             $table->string('jenis');
             $table->text('deskripsi');
             $table->string('asal_daerah');
             $table->enum('status', ['aktif', 'hampir punah', 'punah'])->default('aktif');
-            // Foreign key constraint
             $table->timestamps();
         });
     }
