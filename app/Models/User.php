@@ -5,52 +5,27 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Filament\Models\Contracts\FilamentUser;
-use Filament\Panel;
 
-class User extends Authenticatable implements FilamentUser
+class User extends Authenticatable
 {
     use HasFactory, Notifiable;
+
+    protected $table = 'users';
+    protected $primaryKey = 'user_id';
 
     protected $fillable = [
         'name',
         'email',
         'password',
-        'role',
     ];
 
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    protected function casts(): array
+    public function articles()
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return $this->hasMany(Article::class, 'user_id', 'user_id');
     }
 
-    // Relasi
-    public function budaya()
+    public function comments()
     {
-        return $this->hasMany(Budaya::class, 'user_id', 'id');
-    }
-
-    public function artikel()
-    {
-        return $this->hasMany(Artikel::class, 'user_id', 'id');
-    }
-
-    public function comment()
-    {
-        return $this->hasMany(Comment::class, 'user_id', 'id');
-    }
-
-    // Filament v3 Access
-    public function canAccessPanel(Panel $panel): bool
-    {
-        return in_array($this->role, ['admin', 'superadmin']);
+        return $this->hasMany(Comment::class, 'user_id', 'user_id');
     }
 }

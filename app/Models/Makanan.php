@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Makanan extends Model
 {
+
+    protected $primaryKey = 'makanan_id';
+    protected $fillable = ['nama_makanan', 'deskripsi', 'image', 'lokasi_id', 'user_id'];
     public function user()
     {
         return $this->hasMany(User::class, 'user_id', 'user_id');

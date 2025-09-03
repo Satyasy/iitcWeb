@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Budaya extends Model
 {
+    protected $primaryKey = 'budaya_id';
+    protected $fillable = ['nama', 'deskripsi', 'jenis', 'asal_daerah', 'status', 'user_id'];
+
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id', 'user_id');
