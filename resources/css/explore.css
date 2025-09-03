@@ -1,0 +1,308 @@
+:root {
+    --nusaya-green: #4CB073;
+    --nusaya-text: #395B3B;
+    --nusaya-bg: #F7F7F0;
+    --nusaya-light-green: #E5F0D9;
+    --aura-blue: #40567F;
+    --aura-green: #33675B;
+    --nusaya-dark-blue: #191D43; 
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    .lg\:flex-row {
+        flex-direction: row;
+    }
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.lg\:w-1\/2 {
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .lg\:w-1\/2 {
+        width: 50%;
+    }
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+}
+
+@media (min-width: 768px) {
+    .md\:text-5xl {
+        font-size: 3rem;
+    }
+}
+
+.text-\[\#2F4E24\] {
+    color: var(--nusaya-text);
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.mt-10 {
+    margin-top: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+    .lg\:mt-0 {
+        margin-top: 0;
+    }
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-gray-700 {
+    color: #4a5568;
+}
+
+.max-w-xl {
+    max-width: 36rem;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    .lg\:justify-end {
+        justify-content: flex-end;
+    }
+}
+
+.w-full {
+    width: 100%;
+}
+
+.max-w-sm {
+    max-width: 24rem;
+}
+
+.rounded-3xl {
+    border-radius: 1.5rem;
+}
+
+.shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+    .md\:grid-cols-5 {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+.gap-6 {
+    gap: 1.5rem;
+}
+
+.mt-16 {
+    margin-top: 4rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.w-36 {
+    width: 9rem;
+}
+
+.h-36 {
+    height: 9rem;
+}
+
+.border-4 {
+    border-width: 4px;
+}
+
+.border-\[\#6C824E\] {
+    border-color: var(--nusaya-green);
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.text-gray-800 {
+    color: #2d3748;
+}
+
+.mt-20 {
+    margin-top: 5rem;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+    .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-gray-600 {
+    color: #718096;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.text-gray-500 {
+    color: #a0aec0;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.text-\[\#6C824E\] {
+    color: var(--nusaya-green);
+}
+
+.hover\:underline:hover {
+    text-decoration: underline;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.bg-\[\#6C824E\] {
+    background-color: var(--nusaya-green);
+}
+
+.text-white {
+    color: #fff;
+}
+
+.hover\:bg-\[\#556A3C\]:hover {
+    background-color: var(--nusaya-text);
+}
+
+.transition-transform {
+    transition-property: transform;
+}
+
+.hover\:scale-105:hover {
+    transform: scale(1.05);
+}
