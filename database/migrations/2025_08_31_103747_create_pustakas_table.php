@@ -18,7 +18,8 @@ return new class extends Migration {
             $table->string('tema');
             $table->text('sinopsis');
             $table->date('tahun_terbit');
-            $table->foreignId('budaya_id')->nullable()->constrained('budayas', 'id')->onDelete('set null');
+            $table->foreignId('budaya_id')->nullable()->constrained('budayas', 'budaya_id')->onDelete('set null');
+            
             $table->timestamps();
         });
     }

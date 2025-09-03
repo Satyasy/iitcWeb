@@ -16,13 +16,11 @@ return new class extends Migration {
             $table->text('deskripsi');
             $table->string('penulis');
             $table->string('topic');
-            // Foreign key constraint
-            $table->foreignId('user_id')->constrained('users', 'id')->onDelete('cascade');
-            $table->foreignId('budaya_id')->nullable()->constrained('budayas', 'id')->onDelete('set null');
+            $table->foreignId('user_id')->constrained('users', 'user_id')->onDelete('cascade');
+            $table->foreignId('budaya_id')->nullable()->constrained('budayas', 'budaya_id')->onDelete('set null');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      */
