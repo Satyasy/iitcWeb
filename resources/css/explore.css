@@ -232,15 +232,18 @@ body {
     text-align: center;
 }
 
-.culinary-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+.culinary-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1.5rem;
     margin-top: 2rem;
-    justify-content: center;
 }
 
 .culinary-card {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
     background-color: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
@@ -255,26 +258,29 @@ body {
 }
 
 .culinary-image {
-    width: 100%;
+    width: 150px;
     height: 150px;
     object-fit: cover;
-    display: block;
+    flex-shrink: 0;
 }
 
 .culinary-content {
-    padding: 0.75rem 1rem 1rem;
-    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
 }
 
 .culinary-title {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.25rem;
 }
 
 .culinary-origin {
-    font-size: 0.875rem;
-    color: #6B7280;
+    font-size: 1rem;
+    color: var(--nusaya-text);
 }
 
 /* Articles Section */
@@ -283,23 +289,18 @@ body {
     text-align: center;
 }
 
-.articles-grid {
-    display: grid;
+.articles-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1.5rem;
     margin-top: 2rem;
-    grid-template-columns: 1fr;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-@media (min-width: 1024px) {
-    .articles-grid {
-        grid-template-columns: 2fr 1fr;
-    }
-}
-
-.article-main-card {
+.article-card {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
     background-color: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
@@ -309,74 +310,40 @@ body {
     color: inherit;
 }
 
-.article-main-card:hover {
+.article-card:hover {
     transform: translateY(-5px);
 }
 
-.article-image-main {
-    width: 100%;
-    height: 300px;
+.article-image {
+    width: 150px;
+    height: 150px;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
-.article-content-main {
+.article-content {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: left;
 }
 
-.article-title-main {
+.article-title {
     font-size: 1.25rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .article-meta {
     font-size: 0.875rem;
     color: #6B7280;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 .article-excerpt {
     font-size: 1rem;
     line-height: 1.5;
-}
-
-.article-list-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.article-small-card {
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-}
-
-.article-small-card:hover {
-    transform: translateY(-5px);
-}
-
-.article-image-small {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-.article-content-small {
-    padding: 1rem;
-    text-align: left;
-}
-
-.article-title-small {
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
 }
 
 /* Pustaka Section */
@@ -385,17 +352,18 @@ body {
     text-align: center;
 }
 
-.pustaka-grid {
-    display: grid;
+.pustaka-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin-top: 2rem;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .pustaka-card {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
     background-color: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
@@ -410,24 +378,28 @@ body {
 }
 
 .pustaka-image {
-    width: 100%;
-    height: auto;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
 .pustaka-content {
-    padding: 1rem;
-    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
 }
 
 .pustaka-title {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
-.pustaka-text {
-    font-size: 0.875rem;
-    color: #6B7280;
+.pustaka-origin {
+    font-size: 1rem;
+    color: var(--nusaya-text);
     margin-top: 0.25rem;
 }
 
@@ -437,32 +409,53 @@ body {
     text-align: center;
 }
 
-.event-images-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.event-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1.5rem;
     margin-top: 2rem;
-    justify-content: center;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.event-image-container {
+.event-card {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     text-decoration: none;
-    display: block;
+    color: inherit;
 }
 
-.event-image-container:hover {
-    transform: scale(1.02);
+.event-card:hover {
+    transform: translateY(-5px);
 }
 
 .event-image {
-    width: 100%;
-    height: auto;
-    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.event-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.event-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.event-meta {
+    font-size: 1rem;
+    color: var(--nusaya-text);
+    margin-top: 0.25rem;
 }
