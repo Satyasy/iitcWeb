@@ -8,7 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use Filament\Models\Contracts\FilamentUser;
 
 
-class User extends Authenticatable
+class User extends Authenticatable implements FilamentUser
 {
     use HasFactory, Notifiable;
 
@@ -19,6 +19,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'foto',
+        'role',
     ];
 
     public function artikels()
@@ -31,6 +33,22 @@ class User extends Authenticatable
         return $this->hasMany(Comment::class, 'user_id', 'user_id');
     }
 
+    // Relasi baru, User mengunggah banyak Budaya
+    public function budayas()
+    {
+        return $this->hasMany(Budaya::class, 'user_id', 'user_id');
+    }
 
+    // Metode yang hilang, pastikan untuk menempatkan metode ini di dalam class
+    public function canAccessFilament(): bool
+    {
+        // Logika otorisasi untuk mengakses panel admin
+        // Hanya izinkan peran 'admin' dan 'kurator'
+        return $this->role === 'admin' || $this->role === 'kurator';
+    }
 
+    public function canAccessPanel(\Filament\Panel $panel): bool
+    {
+        return $this->canAccessFilament();
+    }
 }

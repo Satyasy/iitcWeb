@@ -12,11 +12,11 @@ return new class extends Migration {
     {
         Schema::create('budayas', function (Blueprint $table) {
             $table->increments('budaya_id');
-            $table->foreignId('user_id')->constrained('users', 'user_id')->onDelete('cascade');
             $table->string('name');
-            $table->string('jenis');
+            $table->string('foto')->nullable();
+            $table->enum('jenis', ['Pakaian', 'Tari', 'Ritual', 'Seni', 'Upacara', 'Makanan', 'Bahasa', 'Lainnya']);
             $table->text('deskripsi');
-            $table->string('asal_daerah');
+            $table->foreignId('asal_daerah')->constrained('lokasis', 'lokasi_id')->onDelete('cascade');
             $table->enum('status', ['aktif', 'hampir punah', 'punah'])->default('aktif');
             $table->timestamps();
         });

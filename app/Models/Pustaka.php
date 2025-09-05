@@ -9,7 +9,7 @@ class Pustaka extends Model
 {
     use HasFactory;
 
-    protected $table = 'pustakas'; // singular
+    protected $table = 'pustakas';
     protected $primaryKey = 'pustaka_id';
 
     protected $fillable = [
@@ -19,7 +19,7 @@ class Pustaka extends Model
         'budaya_id',
     ];
 
-    public function budayas()
+    public function budaya() // Diubah dari budayas() menjadi singular budaya()
     {
         return $this->belongsTo(Budaya::class, 'budaya_id', 'budaya_id');
     }
