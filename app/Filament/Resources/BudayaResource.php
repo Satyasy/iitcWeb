@@ -22,6 +22,7 @@ class BudayaResource extends Resource
     protected static ?string $model = Budaya::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Manajemen Budaya';
 
     // Di dalam kelas BudayaResource
     public static function form(Form $form): Form

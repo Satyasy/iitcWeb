@@ -26,6 +26,7 @@ class PustakaResource extends Resource
     protected static ?string $model = Pustaka::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Manajemen Budaya';
 
     public static function form(Form $form): Form
     {

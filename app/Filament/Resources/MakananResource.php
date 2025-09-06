@@ -25,6 +25,7 @@ class MakananResource extends Resource
     protected static ?string $model = Makanan::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Manajemen Budaya';
 
     public static function form(Form $form): Form
     {

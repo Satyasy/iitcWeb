@@ -22,6 +22,7 @@ class LokasiResource extends Resource
     protected static ?string $model = Lokasi::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Manajemen Lokasi';
 
     public static function form(Form $form): Form
     {
