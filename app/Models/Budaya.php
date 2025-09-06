@@ -16,6 +16,10 @@ class Budaya extends Model
     protected $fillable = [
         'nama',
         'deskripsi',
+        'foto',
+        'jenis',
+        'asal_daerah',
+        'status',
     ];
 
     public function artikel()

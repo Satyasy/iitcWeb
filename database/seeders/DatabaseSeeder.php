@@ -61,7 +61,6 @@ class DatabaseSeeder extends Seeder
             'topic' => 'Sejarah',
             'user_id' => $kuratorUser->user_id, // Relasi ke user kurator
             'budaya_id' => $budayaBatik->budaya_id, // Relasi ke budaya batik
-            'gambar' => 'image_path.jpg', // Tambahkan nilai untuk kolom gambar yang ada di migrasi
         ]);
 
         // 5. Buat data Komentar dengan relasi ke User (publik) dan Artikel

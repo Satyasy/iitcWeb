@@ -18,7 +18,7 @@ return new class extends Migration {
             $table->string('topic');
             $table->foreignId('user_id')->constrained('users', 'user_id')->onDelete('cascade');
             $table->foreignId('budaya_id')->nullable()->constrained('budayas', 'budaya_id')->onDelete('set null');
-            $table->string('gambar')->nullable();
+            $table->string('foto')->nullable();
             $table->timestamps();
         });
     }

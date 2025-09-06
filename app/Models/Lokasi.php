@@ -13,9 +13,9 @@ class Lokasi extends Model
     protected $primaryKey = 'lokasi_id';
 
     protected $fillable = [
-        'pulau',
-        'provinsi',
-        'kota',
+        'lokasi_id',
+        'nama',
+        'alamat',
     ];
 
     public function event()

@@ -17,6 +17,9 @@ class Artikel extends Model
         'content',
         'user_id',
         'budaya_id',
+        'penulis',
+        'topic',
+        'foto',
     ];
 
     public function user() // Diubah dari users() menjadi singular user()

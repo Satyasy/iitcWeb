@@ -16,6 +16,10 @@ class Event extends Model
         'nama',
         'tanggal',
         'lokasi_id',
+        'deskripsi',
+        'harga_tiket',
+        'foto',
+        'jadwal',
     ];
 
     public function lokasi() // Diubah dari lokasis() menjadi singular lokasi()
