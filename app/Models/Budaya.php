@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Lokasi;
 
 class Budaya extends Model
 {
@@ -15,14 +16,24 @@ class Budaya extends Model
     protected $fillable = [
         'nama',
         'deskripsi',
+        'foto',
+        'jenis',
+        'asal_daerah',
+        'status',
     ];
 
-    public function artikels()
+    public function artikel()
     {
         return $this->hasMany(Artikel::class, 'budaya_id', 'budaya_id');
     }
 
-    public function pustakas()
+    public function lokasi()
+    {
+        // foreignId('asal_daerah')->constrained('lokasis', 'lokasi_id')
+        return $this->belongsTo(Lokasi::class, 'asal_daerah', 'lokasi_id');
+    }
+
+    public function pustaka()
     {
         return $this->hasMany(Pustaka::class, 'budaya_id', 'budaya_id');
     }

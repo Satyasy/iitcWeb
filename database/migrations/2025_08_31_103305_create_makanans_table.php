@@ -12,10 +12,11 @@ return new class extends Migration {
     {
         Schema::create('makanans', function (Blueprint $table) {
             $table->increments('makanan_id');
+            $table->string('foto')->nullable();
             $table->string('nama');
+            $table->enum('jenis', ['makanan', 'minuman'])->after('nama')->default('makanan');
             $table->text('deskripsi');
             $table->foreignId('lokasi_id')->constrained('lokasis', 'lokasi_id')->onDelete('cascade');
-            $table->foreignId('user_id')->constrained('users', 'user_id')->onDelete('cascade');
             $table->timestamps();
         });
     }
