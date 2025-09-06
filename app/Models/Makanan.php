@@ -16,9 +16,11 @@ class Makanan extends Model
         'nama',
         'deskripsi',
         'lokasi_id',
+        'foto',
+        'jenis',
     ];
 
-    public function lokasis()
+    public function lokasi()
     {
         return $this->belongsTo(Lokasi::class, 'lokasi_id', 'lokasi_id');
     }

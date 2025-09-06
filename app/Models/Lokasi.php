@@ -13,18 +13,23 @@ class Lokasi extends Model
     protected $primaryKey = 'lokasi_id';
 
     protected $fillable = [
+        'lokasi_id',
         'nama',
         'alamat',
-        'deskripsi',
     ];
 
-    public function events()
+    public function event()
     {
         return $this->hasMany(Event::class, 'lokasi_id', 'lokasi_id');
     }
 
-    public function makanans()
+    public function makanan()
     {
         return $this->hasMany(Makanan::class, 'lokasi_id', 'lokasi_id');
+    }
+
+    public function budaya()
+    {
+        return $this->hasMany(Budaya::class, 'asal_daerah', 'lokasi_id');
     }
 }

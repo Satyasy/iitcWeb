@@ -13,6 +13,7 @@ return new class extends Migration {
         Schema::create('events', function (Blueprint $table) {
             $table->increments('event_id');
             $table->string('nama');
+            $table->string('foto')->nullable();
             $table->text('deskripsi');
             $table->timestamp('jadwal');
             $table->decimal('harga_tiket', 12, 2);
