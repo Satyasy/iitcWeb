@@ -17,6 +17,12 @@ class Pustaka extends Model
         'penulis',
         'tahun',
         'budaya_id',
+        'tema',
+        'sinopsis',
+        'cover',
+        'author',
+        'file',
+        'tahun_terbit',
     ];
 
     public function budaya() // Diubah dari budayas() menjadi singular budaya()
