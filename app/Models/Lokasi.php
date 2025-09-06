@@ -27,4 +27,9 @@ class Lokasi extends Model
     {
         return $this->hasMany(Makanan::class, 'lokasi_id', 'lokasi_id');
     }
+
+    public function budaya()
+    {
+        return $this->hasMany(Budaya::class, 'asal_daerah', 'lokasi_id');
+    }
 }

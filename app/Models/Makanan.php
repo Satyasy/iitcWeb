@@ -17,6 +17,7 @@ class Makanan extends Model
         'deskripsi',
         'lokasi_id',
         'foto',
+        'jenis',
     ];
 
     public function lokasi()
