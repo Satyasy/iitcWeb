@@ -1,0 +1,163 @@
+/* Variabel warna */
+:root {
+    --nusaya-green: #4CB073;
+    --nusaya-text: #395B3B;
+    --nusaya-bg: #F7F7F0;
+    --aura-blue: #40567F;
+    --aura-green: #33675B;
+    --nusaya-dark-blue: #191D43;
+}
+
+/* Gaya dasar */
+body {
+    background-color: var(--nusaya-bg);
+    color: var(--nusaya-text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.detail-content {
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Bagian hero dengan gambar dan overlay teks */
+.detail-hero {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Menggunakan viewport height untuk tinggi */
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.detail-main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7); /* Membuat gambar lebih gelap agar teks mudah dibaca */
+}
+
+.detail-text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.detail-category {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--nusaya-green);
+}
+
+.detail-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.detail-subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* Bagian konten utama */
+.detail-body {
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+    margin-top: -20px; /* Membuat efek menumpuk di atas gambar hero */
+    padding: 2rem 1rem;
+    position: relative;
+    box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Kartu informasi */
+.detail-info-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--nusaya-text);
+    color: white;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    margin-top: -4rem; /* Menarik kartu ke atas */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.info-value {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Konten teks */
+.detail-text-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.detail-text-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Responsif */
+@media (min-width: 768px) {
+    .detail-hero {
+        height: 75vh;
+    }
+    .detail-text-overlay {
+        padding: 4rem;
+        text-align: left;
+    }
+    .detail-category {
+        font-size: 1.1rem;
+    }
+    .detail-title {
+        font-size: 4rem;
+    }
+    .detail-subtitle {
+        font-size: 1.5rem;
+    }
+    .detail-body {
+        padding: 3rem 2rem;
+    }
+    .detail-info-card {
+        flex-direction: row;
+        gap: 2rem;
+        padding: 1.5rem 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .detail-text-overlay {
+        left: 10%;
+        bottom: 15%;
+    }
+}
