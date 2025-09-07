@@ -43,7 +43,7 @@ Ikuti langkah-langkah di bawah ini untuk menyiapkan proyek di lingkungan lokal A
 1.  **Kloning Repositori**
 
     ```bash
-    git clone [URL_REPOSITORI_ANDA]
+    git clone https://github.com/satyasy/iitcweb
     cd nama-proyek
     ```
 
