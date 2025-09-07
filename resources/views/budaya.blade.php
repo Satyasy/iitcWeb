@@ -89,7 +89,7 @@
             <div class="button-container">
                 <a href="#" class="btn-secondary">Ragam Budaya Nusantara</a>
                 <a href="#" class="btn-secondary">Bahasa & Aksara Daerah</a>
-                <a href="#" class="btn-secondary">Tradisi & Upacara Adat</a>
+                <a href="/ragam" class="btn-secondary">Tradisi & Upacara Adat</a>
                 <a href="#" class="btn-secondary">Makanan Khas Nusantara</a>
                 <a href="#" class="btn-secondary">Jajanan Tradisional</a>
                 <a href="#" class="btn-secondary">Minuman</a>

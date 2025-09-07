@@ -1,0 +1,202 @@
+/* Menggunakan variabel warna yang sama */
+:root {
+    --nusaya-green: #4CB073;
+    --nusaya-text: #395B3B;
+    --nusaya-bg: #F7F7F0;
+    --aura-blue: #40567F;
+    --aura-green: #33675B;
+    --nusaya-dark-blue: #191D43;
+}
+
+/* Gaya Dasar */
+body {
+    background-color: var(--nusaya-bg);
+    color: var(--nusaya-text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.main-content {
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Bagian Hero */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--nusaya-bg);
+    padding: 2rem 1rem;
+    position: relative;
+    gap: 2rem;
+}
+
+.hero-text {
+    text-align: center;
+    max-width: 900px;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--nusaya-text);
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--nusaya-text);
+}
+
+.hero-image-grid {
+    display: none; /* Default: Sembunyikan di layar kecil */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.hero-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.hero-main-image {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.hero-main-image-inner {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul Bagian */
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--nusaya-text);
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 2rem;
+}
+
+.section-title span {
+    color: var(--nusaya-green);
+}
+
+.title-underline {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--nusaya-green);
+    border-radius: 2px;
+}
+
+/* Grid Kartu */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-decoration: none;
+    color: var(--nusaya-text);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 200px);
+}
+
+.card-category {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--nusaya-green);
+    margin-bottom: 0.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-location {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* Responsif */
+@media (min-width: 768px) {
+    .hero-section {
+        flex-direction: row;
+        text-align: left;
+        padding: 4rem;
+        gap: 4rem;
+    }
+
+    .hero-text {
+        max-width: 50%;
+        text-align: left;
+    }
+
+    .hero-title {
+        font-size: 4.5rem;
+        line-height: 1.1;
+    }
+
+    .hero-image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .hero-main-image {
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-section {
+        padding: 6rem;
+    }
+    .hero-title {
+        font-size: 6rem;
+    }
+}
