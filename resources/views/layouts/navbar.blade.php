@@ -6,7 +6,7 @@
                     <img src="{{ asset('images/logo1.png') }}" alt="Nusaya Logo" class="logo-img">
                 </a>
             </div>
-            
+
             <button class="menu-toggle" aria-label="Toggle navigation">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -22,6 +22,7 @@
                 @endguest
                 @auth
                     <a href="/profile" class="btn-login-mobile">Profile</a>
+                    <a href="/chatbot" class="nav-link">Chatbot</a>
                 @endauth
             </div>
 
@@ -46,7 +47,8 @@
             link.classList.remove('active');
             if (currentPath === '/' && link.getAttribute('href') === '/') {
                 link.classList.add('active');
-            } else if (currentPath.includes(link.getAttribute('href')) && link.getAttribute('href') !== '/') {
+            } else if (currentPath.includes(link.getAttribute('href')) && link.getAttribute('href') !==
+                '/') {
                 link.classList.add('active');
             }
         });
