@@ -1,4 +1,3 @@
-/* --- Root Variables and Common Styles --- */
 :root {
     --nusaya-green: #4CB073;
     --nusaya-text: #395B3B;
@@ -99,7 +98,6 @@ body {
     border-radius: 1rem;
 }
 
-/* --- Section Headers --- */
 .explore-section-header {
     text-align: center;
     margin-bottom: 2.5rem;
@@ -112,7 +110,6 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* --- Category Section Grid & Cards --- */
 .explore-category-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -155,12 +152,10 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Specific styles for small cards */
 .explore-card-small {
     background-color: #fff;
 }
 
-/* Specific styles for large cards with images */
 .explore-card-large-wrapper {
     position: relative;
     padding: 0;
@@ -176,7 +171,7 @@ body {
     background-size: cover;
     background-position: center;
     transition: transform 0.4s ease;
-    transform: scale(1.1); /* Initial state for parallax effect */
+    transform: scale(1.1);
 }
 
 .explore-card-overlay {
@@ -394,7 +389,6 @@ body {
     margin-top: 0.25rem;
 }
 
-/* --- Buttons --- */
 .explore-btn-primary {
     display: inline-block;
     padding: 0.75rem 2rem;
