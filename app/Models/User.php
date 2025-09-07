@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel;
 
 
 class User extends Authenticatable implements FilamentUser
@@ -44,7 +45,7 @@ class User extends Authenticatable implements FilamentUser
     {
         // Logika otorisasi untuk mengakses panel admin
         // Hanya izinkan peran 'admin' dan 'kurator'
-        return $this->role === 'admin' || $this->role === 'kurator';
+        return $this->role === 'admin';
     }
 
     public function canAccessPanel(\Filament\Panel $panel): bool
