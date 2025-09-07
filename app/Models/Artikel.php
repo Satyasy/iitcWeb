@@ -22,12 +22,12 @@ class Artikel extends Model
         'foto',
     ];
 
-    public function user() // Diubah dari users() menjadi singular user()
+    public function users() // Diubah dari users() menjadi singular user()
     {
         return $this->belongsTo(User::class, 'user_id', 'user_id');
     }
 
-    public function budaya() // Diubah dari budayas() menjadi singular budaya()
+    public function budayas() // Diubah dari budayas() menjadi singular budaya()
     {
         return $this->belongsTo(Budaya::class, 'budaya_id', 'budaya_id');
     }

@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ChatbotController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ExploreController; // Pastikan ini ada
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,16 +22,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/chatbot', function () {
         return view('chatbot');
     })->name('chatbot');
- 
-Route::middleware('budaya')->group(function () {
-    Route::get('/budaya', function () {
-        return view('budaya');
-    })->name('budaya');
+    
+    // BARIS INI AKAN MEMANGGIL CONTROLLER YANG MENGIRIM DATA DARI DATABASE
+    Route::get('/explore', [ExploreController::class, 'index'])->name('explore');
   
-Route::middleware('auth')->group(function () {
-    Route::get('/explore', function () {
-        return view('explore');
-    })->name('explore');
+
 
     // API chatbot
     Route::post('/chatbot/ask', [ChatbotController::class, 'ask'])->name('chatbot.ask');
