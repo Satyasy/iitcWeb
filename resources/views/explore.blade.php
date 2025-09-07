@@ -17,7 +17,7 @@
         <h2 class="explore-section-title">Ragam Kuliner Nusantara</h2>
         <div class="explore-culinary-list">
             <a href="#" class="explore-culinary-card">
-                <img src="{{ asset('images/explore_asset/sate.jpg') }}" alt="Sate Madura" class="explore-culinary-image">
+                <img src="{{ asset('images/explore_asset/satemadura.jpg') }}" alt="Sate Madura" class="explore-culinary-image">
                 <div class="explore-culinary-content">
                     <h3 class="explore-culinary-title">Sate Madura</h3>
                     <p class="explore-culinary-origin">Kuliner Khas Madura</p>
@@ -31,7 +31,7 @@
                 </div>
             </a>
             <a href="#" class="explore-culinary-card">
-                <img src="{{ asset('images/explore_asset/gado-gado.jpg') }}" alt="Gado-Gado" class="explore-culinary-image">
+                <img src="{{ asset('images/explore_asset/gadogado.jpg') }}" alt="Gado-Gado" class="explore-culinary-image">
                 <div class="explore-culinary-content">
                     <h3 class="explore-culinary-title">Gado-Gado</h3>
                     <p class="explore-culinary-origin">Kuliner Khas Betawi</p>
@@ -52,7 +52,7 @@
         <h2 class="explore-section-title">Ragam Artikel Budaya Nusantara</h2>
         <div class="explore-articles-list">
             <a href="#" class="explore-article-card">
-                <img src="{{ asset('images/explore_asset/artikel-utama.jpg') }}" alt="Gamelan: Harmoni yang Mendunia" class="explore-article-image">
+                <img src="{{ asset('images/explore_asset/gamelan.jpg') }}" alt="Gamelan: Harmoni yang Mendunia" class="explore-article-image">
                 <div class="explore-article-content">
                     <h3 class="explore-article-title">Gamelan: Harmoni yang Mendunia</h3>
                     <p class="explore-article-meta">oleh Redaksi | Pustaka & Artikel</p>
@@ -60,7 +60,7 @@
                 </div>
             </a>
             <a href="#" class="explore-article-card">
-                <img src="{{ asset('images/explore_asset/artikel-kecil-1.jpg') }}" alt="Tari Saman" class="explore-article-image">
+                <img src="{{ asset('images/explore_asset/tarisaman.jpg') }}" alt="Tari Saman" class="explore-article-image">
                 <div class="explore-article-content">
                     <h3 class="explore-article-title">Tari Saman: Kekompakan Ribuan Tangan</h3>
                     <p class="explore-article-meta">oleh Redaksi | Pustaka & Artikel</p>
@@ -68,7 +68,7 @@
                 </div>
             </a>
             <a href="#" class="explore-article-card">
-                <img src="{{ asset('images/explore_asset/artikel-kecil-2.jpg') }}" alt="Wajah Manusia Jawa Kuno" class="explore-article-image">
+                <img src="{{ asset('images/explore_asset/manusiajawakuno.jpeg') }}" alt="Wajah Manusia Jawa Kuno" class="explore-article-image">
                 <div class="explore-article-content">
                     <h3 class="explore-article-title">Wajah Manusia Jawa Kuno di Indonesia</h3>
                     <p class="explore-article-meta">oleh Redaksi | Pustaka & Artikel</p>
@@ -76,7 +76,7 @@
                 </div>
             </a>
             <a href="#" class="explore-article-card">
-                <img src="{{ asset('images/explore_asset/artikel-kecil-3.jpg') }}" alt="Menjelajahi Sejarah Raja-Raja" class="explore-article-image">
+                <img src="{{ asset('images/explore_asset/rajaindonesia.jpg') }}" alt="Menjelajahi Sejarah Raja-Raja" class="explore-article-image">
                 <div class="explore-article-content">
                     <h3 class="explore-article-title">Menjelajahi Sejarah Raja-Raja di Indonesia</h3>
                     <p class="explore-article-meta">oleh Redaksi | Pustaka & Artikel</p>
@@ -84,11 +84,19 @@
                 </div>
             </a>
             <a href="#" class="explore-article-card">
-                <img src="{{ asset('images/explore_asset/artikel-kecil-4.jpg') }}" alt="Festival Gandrung Sewu" class="explore-article-image">
+                <img src="{{ asset('images/explore_asset/gandrungsewu.png') }}" alt="Festival Gandrung Sewu" class="explore-article-image">
                 <div class="explore-article-content">
                     <h3 class="explore-article-title">Festival Gandrung Sewu</h3>
                     <p class="explore-article-meta">oleh Redaksi | Pustaka & Artikel</p>
                     <p class="explore-article-excerpt">Festival Gandrung Sewu adalah perayaan budaya yang megah di Banyuwangi...</p>
+                </div>
+            </a>
+            <a href="#" class="explore-article-card">
+                <img src="{{ asset('images/explore_asset/nyadran.webp') }}" alt="Festival Gandrung Sewu" class="explore-article-image">
+                <div class="explore-article-content">
+                    <h3 class="explore-article-title">Tradisi Nyadran</h3>
+                    <p class="explore-article-meta">oleh Redaksi | Pustaka & Artikel</p>
+                    <p class="explore-article-excerpt">tradisi masyarakat Jawa sebagai bentuk rasa syukur dengan berziarah...</p>
                 </div>
             </a>
         </div>
@@ -99,24 +107,31 @@
         <h2 class="explore-section-title">Pustaka Nusantara</h2>
         <div class="explore-pustaka-list">
             <a href="#" class="explore-pustaka-card">
-                <img src="{{ asset('images/explore_asset/timun-mas.jpg') }}" alt="Timun Mas" class="explore-pustaka-image">
+                <img src="{{ asset('images/explore_asset/timunmas.jpg') }}" alt="Timun Mas" class="explore-pustaka-image">
                 <div class="explore-pustaka-content">
                     <h3 class="explore-pustaka-title">Timun Mas</h3>
                     <p class="explore-pustaka-origin">Cerita Rakyat</p>
                 </div>
             </a>
             <a href="#" class="explore-pustaka-card">
-                <img src="{{ asset('images/explore_asset/aksara-jawa.jpg') }}" alt="Aksara Jawa" class="explore-pustaka-image">
+                <img src="{{ asset('images/explore_asset/aksarajawa.png') }}" alt="Aksara Jawa" class="explore-pustaka-image">
                 <div class="explore-pustaka-content">
                     <h3 class="explore-pustaka-title">Aksara Jawa (Hanacaraka)</h3>
                     <p class="explore-pustaka-origin">Bahasa & Aksara Kuno</p>
                 </div>
             </a>
             <a href="#" class="explore-pustaka-card">
-                <img src="{{ asset('images/explore_asset/danau-toba.jpg') }}" alt="Danau Toba" class="explore-pustaka-image">
+                <img src="{{ asset('images/explore_asset/danautoba.jpg') }}" alt="Danau Toba" class="explore-pustaka-image">
                 <div class="explore-pustaka-content">
                     <h3 class="explore-pustaka-title">Danau Toba</h3>
                     <p class="explore-pustaka-origin">Cerita Rakyat</p>
+                </div>
+            </a>
+            <a href="#" class="explore-pustaka-card">
+                <img src="{{ asset('images/explore_asset/suratbatak.png') }}" alt="Danau Toba" class="explore-pustaka-image">
+                <div class="explore-pustaka-content">
+                    <h3 class="explore-pustaka-title">Surat Batak</h3>
+                    <p class="explore-pustaka-origin">Bahasa & Aksara Kuno</p>
                 </div>
             </a>
         </div>
@@ -127,14 +142,14 @@
         <h2 class="explore-section-title">Jelajahi Harmoni Event Budaya Nusantara</h2>
         <div class="explore-event-list">
             <a href="#" class="explore-event-card">
-                <img src="{{ asset('images/explore_asset/event-1.jpg') }}" alt="Festival Nusantara 2024" class="explore-event-image">
+                <img src="{{ asset('images/explore_asset/festivalnusantara.png') }}" alt="Festival Nusantara 2024" class="explore-event-image">
                 <div class="explore-event-content">
                     <h3 class="explore-event-title">Festival Nusantara 2024</h3>
                     <p class="explore-event-meta">Event Budaya</p>
                 </div>
             </a>
             <a href="#" class="explore-event-card">
-                <img src="{{ asset('images/explore_asset/event-2.jpg') }}" alt="Tari Tradisional" class="explore-event-image">
+                <img src="{{ asset('images/explore_asset/taritradisional.png') }}" alt="Tari Tradisional" class="explore-event-image">
                 <div class="explore-event-content">
                     <h3 class="explore-event-title">Tari Tradisional</h3>
                     <p class="explore-event-meta">Event Budaya</p>

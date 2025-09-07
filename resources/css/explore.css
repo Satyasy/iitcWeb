@@ -1,7 +1,7 @@
 /* --- Root Variables and Common Styles --- */
 :root {
     --nusaya-green: #4CB073;
-    --nusaya-text: #1A1A1A;
+    --nusaya-text: #395B3B;
     --nusaya-bg: #F7F9F3;
     --nusaya-light-green: #E5F0D9;
     --nusaya-dark-blue: #191D43;
@@ -410,6 +410,7 @@ body {
     background-position: left;
     transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 2.5rem;
 }
 
 .explore-btn-primary:hover,
