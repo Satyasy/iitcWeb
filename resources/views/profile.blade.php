@@ -131,6 +131,18 @@
         font-size: 14px;
     }
 
+    .profile-card img {
+        width: 100px;
+        /* Sesuaikan ukuran sesuai kebutuhan */
+        height: 100px;
+        /* Sesuaikan ukuran sesuai kebutuhan */
+        border-radius: 50%;
+        /* Membuat gambar menjadi lingkaran */
+        object-fit: cover;
+        /* Memastikan gambar terisi penuh tanpa distorsi */
+        margin-bottom: 10px;
+    }
+
     .footer {
         text-align: center;
         margin-top: 40px;
@@ -151,6 +163,13 @@
         <div class="profile-card">
             <h2>Halo {{ $user->name }}!</h2>
             <p>@username</p>
+
+            @if ($user->foto)
+                <img src="{{ asset('storage/' . $user->foto) }}" alt="Foto Profil">
+            @else
+                <img src="{{ asset('path/to/default/profile_image.png') }}" alt="Foto Profil Default">
+            @endif
+
             <div class="input-group">
                 <input type="text" value="{{ $user->name }}" placeholder="Nama Lengkap">
             </div>
@@ -159,32 +178,5 @@
             </div>
         </div>
 
-        <div class="comment-section">
-            <h3>Riwayat Komentar</h3>
-            <div class="comment-list">
-                @foreach ($comments as $comment)
-                    <div class="comment-item">
-                        <strong>{{ $user->name }}</strong>
-                        <p>{{ $comment->comment }}</p>
-                        <small>Pada Artikel: <a href="#">{{ $comment->artikel->title }}</a></small>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-
-        <div class="explore-section">
-            <h3>Jelajahi lainnya</h3>
-            <div class="explore-tags">
-                <a href="#" class="tag">Ragam Budaya Nusantara</a>
-                <a href="#" class="tag">Bahasa & Aksara Daerah</a>
-                <a href="#" class="tag">Tradisi & Upacara Adat</a>
-                <a href="#" class="tag">Makanan Khas Nusantara</a>
-                <a href="#" class="tag">Jajanan Tradisional</a>
-                <a href="#" class="tag">Minuman</a>
-                <a href="#" class="tag">Artikel</a>
-                <a href="#" class="tag">Pustaka</a>
-                <a href="#" class="tag">Event Kebudayaan</a>
-            </div>
-        </div>
     </div>
 @endsection
