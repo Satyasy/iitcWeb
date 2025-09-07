@@ -10,7 +10,7 @@
 @section('content')
     <main class="detail-content">
         <section class="detail-hero">
-            <img src="{{ asset('images/ragam_asset/tari_tradisional.jpg') }}" alt="Gambar Utama" class="detail-main-image">
+            <img src="{{ asset('images/explore_asset/tari.png') }}" alt="Gambar Utama" class="detail-main-image">
             <div class="detail-text-overlay">
                 <span class="detail-category">Tarian</span>
                 <h1 class="detail-title">Tari Puspajali</h1>

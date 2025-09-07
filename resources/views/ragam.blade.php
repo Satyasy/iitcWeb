@@ -37,7 +37,7 @@
             <div class="card-grid">
                 <!-- Contoh Kartu Budaya (Statik) -->
                 <a href="/detail" class="card">
-                    <img src="{{ asset('images/ragam_asset/tari_tradisional.jpg') }}" alt="Tari Tradisional" class="card-image">
+                    <img src="{{ asset('images/explore_asset/tari.png') }}" alt="Tari Tradisional" class="card-image">
                     <div class="card-content">
                         <span class="card-category">Tarian</span>
                         <h4 class="card-title">Tari Puspajali</h4>
