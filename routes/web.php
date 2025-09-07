@@ -7,12 +7,9 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ChatbotController;
 use App\Http\Controllers\ProfileController;
 
-
-
 Route::get('/', function () {
     return view('welcome');
 });
-
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('register');
@@ -28,3 +25,7 @@ Route::post('/chatbot/ask', [ChatbotController::class, 'ask'])->name('chatbot.as
 Route::get('/chatbot/quick-ask', [ChatbotController::class, 'getQuickAsk'])->name('chatbot.quickask');
 
 Route::get('/profile', [ProfileController::class, 'show'])->middleware('auth');
+
+Route::get('/explore', function () {
+    return view('explore');
+});
