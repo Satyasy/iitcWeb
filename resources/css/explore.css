@@ -1,461 +1,415 @@
-/* Color Palette */
 :root {
     --nusaya-green: #4CB073;
     --nusaya-text: #395B3B;
-    --nusaya-bg: #F7F7F0;
+    --nusaya-bg: #F7F9F3;
     --nusaya-light-green: #E5F0D9;
-    --aura-blue: #40567F;
-    --aura-green: #33675B;
     --nusaya-dark-blue: #191D43;
-    --card-bg: #EAEAE2;
-    --border-color: #D3D3D3;
 }
 
-/* General Styles */
 body {
     background-color: var(--nusaya-bg);
-    font-family: 'Inter', sans-serif;
     color: var(--nusaya-text);
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-.main-content {
-    max-width: 1400px;
+.explore-main-content {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 6rem 1rem 4rem 1rem;
 }
 
-.section-title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: var(--nusaya-text);
-    text-align: center;
-    margin: 5rem 0 2rem 0;
-    line-height: 1.2;
-}
-
-/* Button Styles */
-.btn-primary {
-    display: inline-block;
-    font-weight: 600;
-    padding: 12px 24px;
-    border-radius: 9999px;
-    text-decoration: none;
-    color: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    background-color: var(--nusaya-green);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 2rem;
-}
-
-.btn-primary:hover {
-    background-color: var(--aura-green);
-    transform: translateY(-2px);
-}
-
-/* Hero Section */
-.hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 3rem 1rem;
-    gap: 2rem;
-}
-
-@media (min-width: 1024px) {
-    .hero-section {
-        flex-direction: row;
-        text-align: left;
-        padding: 4rem 2rem;
-    }
-}
-
-.hero-text-container {
-    padding-bottom: 2rem;
-    width: 100%;
-}
-
-@media (min-width: 1024px) {
-    .hero-text-container {
-        width: 50%;
-        padding-bottom: 0;
-    }
-}
-
-.hero-title {
-    font-size: 2.5rem;
+.explore-section-title {
+    font-size: 2rem;
     font-weight: 800;
     color: var(--nusaya-text);
-    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
 }
 
-.hero-text {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: var(--nusaya-text);
-    max-width: 36rem;
-    margin-left: auto;
-    margin-right: auto;
+.explore-section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--nusaya-green);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* --- Hero Section --- */
+.explore-hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
 }
 
 @media (min-width: 1024px) {
-    .hero-text {
-        margin-left: 0;
-        margin-right: 0;
+    .explore-hero-section {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
-.hero-image-container {
-    width: 100%;
+.explore-hero-text-container {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 @media (min-width: 1024px) {
-    .hero-image-container {
+    .explore-hero-text-container {
+        text-align: left;
+        max-width: 50%;
+        margin-right: 2rem;
+    }
+}
+
+.explore-hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--nusaya-text);
+}
+
+.explore-hero-text {
+    font-size: 1.125rem;
+    color: #4B5563;
+    margin-top: 1rem;
+}
+
+.explore-hero-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    .explore-hero-image-container {
         width: 50%;
     }
 }
 
-.hero-image {
-    width: 100%;
+.explore-hero-image {
+    max-width: 100%;
     height: auto;
-    display: block;
+    border-radius: 1rem;
 }
 
-/* Category Section */
-.category-section {
-    padding: 3rem 1rem;
+.explore-section-header {
     text-align: center;
+    margin-bottom: 2.5rem;
 }
 
-.category-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.category-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.category-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-.card-style-1 {
-    width: 100%;
-    max-width: 280px;
-}
-
-.card-image-1 {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 1rem;
-}
-
-.card-content-1 {
-    padding: 0 1rem 1rem 1rem;
-    text-align: left;
-}
-
-.card-title-1 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--nusaya-text);
-}
-
-.card-description-1 {
-    font-size: 0.8rem;
-    color: var(--nusaya-text);
-    margin-top: 0.25rem;
-}
-
-.card-style-2 {
-    width: 100%;
-    max-width: 280px;
-    position: relative;
-    color: white;
-}
-
-.card-image-2 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-.card-content-2 {
-    position: relative;
-    z-index: 2;
-    padding: 1rem;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.card-title-2 {
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: white;
-}
-
-.card-description-2 {
+.explore-section-subtitle {
+    color: var(--nusaya-green);
     font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-top: 0.5rem;
-}
-
-/* Culinary Section */
-.culinary-section {
-    padding: 3rem 1rem;
-    text-align: center;
-}
-
-.culinary-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.culinary-card {
-    display: flex;
-    width: 100%;
-    max-width: 800px;
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-    text-decoration: none;
-    color: inherit;
-}
-
-.culinary-card:hover {
-    transform: translateY(-5px);
-}
-
-.culinary-image {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-.culinary-content {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.culinary-title {
-    font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 0.25rem;
-}
-
-.culinary-origin {
-    font-size: 1rem;
-    color: var(--nusaya-text);
-}
-
-/* Articles Section */
-.articles-section {
-    padding: 3rem 1rem;
-    text-align: center;
-}
-
-.articles-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.article-card {
-    display: flex;
-    width: 100%;
-    max-width: 800px;
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-    text-decoration: none;
-    color: inherit;
-}
-
-.article-card:hover {
-    transform: translateY(-5px);
-}
-
-.article-image {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-.article-content {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.article-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-}
-
-.article-meta {
-    font-size: 0.875rem;
-    color: #6B7280;
     margin-bottom: 0.5rem;
 }
 
-.article-excerpt {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* Pustaka Section */
-.pustaka-section {
-    padding: 3rem 1rem;
-    text-align: center;
-}
-
-.pustaka-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.explore-category-grid {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
-    margin-top: 2rem;
 }
 
-.pustaka-card {
-    display: flex;
-    width: 100%;
-    max-width: 800px;
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    overflow: hidden;
+@media (min-width: 768px) {
+    .explore-category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .explore-category-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, minmax(200px, 1fr));
+    }
+    .explore-category-grid > a:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 2; }
+    .explore-category-grid > a:nth-child(2) { grid-column: 1 / 2; grid-row: 2 / 3; }
+    .explore-category-grid > a:nth-child(3) { grid-column: 2 / 3; grid-row: 2 / 3; }
+    .explore-category-grid > a:nth-child(4) { grid-column: 2 / 5; grid-row: 1 / 2; }
+    .explore-category-grid > a:nth-child(5) { grid-column: 3 / 5; grid-row: 2 / 3; }
+}
+
+.explore-card {
+    border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
-    color: inherit;
-}
-
-.pustaka-card:hover {
-    transform: translateY(-5px);
-}
-
-.pustaka-image {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-.pustaka-content {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     padding: 1.5rem;
+    height: 100%;
+}
+
+.explore-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.explore-card-small {
+    background-color: #fff;
+}
+
+.explore-card-large-wrapper {
+    position: relative;
+    padding: 0;
+    display: block;
+}
+
+.explore-card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+    transform: scale(1.1);
+}
+
+.explore-card-overlay {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: left;
+    justify-content: flex-end;
+    color: #fff;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-.pustaka-title {
-    font-size: 1.25rem;
-    font-weight: 600;
+.explore-card-tag {
+    background-color: var(--nusaya-green);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
 }
 
-.pustaka-origin {
-    font-size: 1rem;
-    color: var(--nusaya-text);
-    margin-top: 0.25rem;
+.explore-card-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: inherit;
+    margin: 0;
 }
 
-/* Event Section */
-.event-section {
-    padding: 3rem 1rem;
-    text-align: center;
+.explore-card-description {
+    font-size: 0.875rem;
+    color: inherit;
+    margin-top: 0.5rem;
 }
 
-.event-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* --- Culinary Section --- */
+.explore-culinary-section, .explore-articles-section, .explore-pustaka-section, .explore-event-section {
+    margin-top: 4rem;
+}
+
+.explore-culinary-list, .explore-pustaka-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     gap: 1.5rem;
     margin-top: 2rem;
 }
 
-.event-card {
-    display: flex;
-    width: 100%;
-    max-width: 800px;
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+@media (min-width: 768px) {
+    .explore-culinary-list, .explore-pustaka-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .explore-culinary-list, .explore-pustaka-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.explore-culinary-card, .explore-pustaka-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     text-decoration: none;
-    color: inherit;
+    color: var(--nusaya-text);
+    overflow: hidden;
 }
 
-.event-card:hover {
-    transform: translateY(-5px);
+.explore-culinary-card:hover, .explore-pustaka-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -4px rgba(0, 0, 0, 0.1);
 }
 
-.event-image {
-    width: 150px;
+.explore-culinary-image, .explore-pustaka-image {
+    width: 100%;
     height: 150px;
     object-fit: cover;
-    flex-shrink: 0;
 }
 
-.event-content {
-    padding: 1.5rem;
+.explore-culinary-content, .explore-pustaka-content {
+    padding: 1rem;
+}
+
+.explore-culinary-title, .explore-pustaka-title {
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.explore-culinary-origin, .explore-pustaka-origin {
+    font-size: 0.75rem;
+    color: #a0aec0;
+    margin-top: 0.25rem;
+}
+
+/* --- Articles Section --- */
+.explore-articles-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .explore-articles-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .explore-articles-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.explore-article-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-decoration: none;
+    color: var(--nusaya-text);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: left;
 }
 
-.event-title {
+.explore-article-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -4px rgba(0, 0, 0, 0.1);
+}
+
+.explore-article-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.explore-article-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.explore-article-title {
+    font-weight: bold;
     font-size: 1.25rem;
-    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
-.event-meta {
-    font-size: 1rem;
+.explore-article-meta {
+    font-size: 0.75rem;
+    color: var(--nusaya-green);
+    margin-bottom: 0.5rem;
+}
+
+.explore-article-excerpt {
+    font-size: 0.875rem;
+    color: #718096;
+}
+
+/* --- Event Section --- */
+.explore-event-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .explore-event-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.explore-event-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-decoration: none;
     color: var(--nusaya-text);
+    overflow: hidden;
+}
+
+.explore-event-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -4px rgba(0, 0, 0, 0.1);
+}
+
+.explore-event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.explore-event-content {
+    padding: 1.5rem;
+}
+
+.explore-event-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.explore-event-meta {
+    font-size: 0.875rem;
+    color: #718096;
     margin-top: 0.25rem;
+}
+
+.explore-btn-primary {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 9999px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg, #4CB073 0%, #33675B 33%, #40567F 66%, #191D43 100%);
+    background-size: 300% 100%;
+    background-position: left;
+    transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 2.5rem;
+}
+
+.explore-btn-primary:hover,
+.explore-btn-primary:active {
+    background-position: right;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }

@@ -25,6 +25,8 @@ Route::middleware('auth')->group(function () {
     
     // BARIS INI AKAN MEMANGGIL CONTROLLER YANG MENGIRIM DATA DARI DATABASE
     Route::get('/explore', [ExploreController::class, 'index'])->name('explore');
+  
+
 
     // API chatbot
     Route::post('/chatbot/ask', [ChatbotController::class, 'ask'])->name('chatbot.ask');
