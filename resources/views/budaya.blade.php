@@ -1,8 +1,14 @@
 @extends('layouts.app')
 
+@section('title', 'Budaya')
+
+{{-- Menghubungkan file CSS khusus untuk halaman ini --}}
+@push('head')
+<link rel="stylesheet" href="{{ asset('css/budaya.css') }}">
+@endpush
+
 @section('content')
     <main class="main-content">
-        <!-- Section: Hero -->
         <section class="hero-section">
             <div class="hero-text">
                 <h1 class="hero-title">Ragam Budaya Nusantara</h1>
@@ -21,65 +27,66 @@
             </div>
         </section>
 
-        <!-- Section: Ragam Budaya Nusantara Cards -->
         <section class="my-12 max-w-6xl mx-auto px-4 py-8">
-            <h3 class="text-2xl md:text-3xl font-bold text-center text-[#1A1A1A] mb-8">Ragam Budaya <span class="text-[#4CB073]">Nusantara</span></h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Contoh Kartu Budaya -->
-                <div class="card bg-white rounded-xl shadow-lg overflow-hidden relative group">
-                    <img src="{{ asset('storage/images/tarian-tradisional.jpg') }}" alt="Tari Tradisional" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105">
-                    <div class="p-4">
-                        <h4 class="font-bold text-lg mb-1">Tari Tradisional</h4>
-                        <p class="text-sm text-gray-500">Kesenian</p>
+            <h3 class="section-title">Ragam Budaya <span>Nusantara</span>
+                <div class="title-underline"></div>
+            </h3>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="{{ asset('images/budaya_asset/taritradisional.png') }}" alt="Tari Tradisional" class="card-image">
+                    <div class="card-content">
+                        <h4 class="card-title">Tari Tradisional</h4>
+                        <p class="card-subtitle">Kesenian</p>
                     </div>
                 </div>
                 
-                <div class="card bg-white rounded-xl shadow-lg overflow-hidden relative group">
-                    <img src="{{ asset('storage/images/alat-musik.jpg') }}" alt="Alat Musik Tradisional" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105">
-                    <div class="p-4">
-                        <h4 class="font-bold text-lg mb-1">Alat Musik Tradisional</h4>
-                        <p class="text-sm text-gray-500">Kesenian</p>
+                <div class="card">
+                    <img src="{{ asset('images/budaya_asset/alatmusiktradisional.avif') }}" alt="Alat Musik Tradisional" class="card-image">
+                    <div class="card-content">
+                        <h4 class="card-title">Alat Musik Tradisional</h4>
+                        <p class="card-subtitle">Kesenian</p>
                     </div>
                 </div>
 
-                <div class="card bg-white rounded-xl shadow-lg overflow-hidden relative group">
-                    <img src="{{ asset('storage/images/pakaian-adat.jpg') }}" alt="Pakaian Adat Daerah" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105">
-                    <div class="p-4">
-                        <h4 class="font-bold text-lg mb-1">Pakaian Adat Daerah</h4>
-                        <p class="text-sm text-gray-500">Pakaian</p>
+                <div class="card">
+                    <img src="{{ asset('images/budaya_asset/pakaianadat.png') }}" alt="Pakaian Adat Daerah" class="card-image">
+                    <div class="card-content">
+                        <h4 class="card-title">Pakaian Adat Daerah</h4>
+                        <p class="card-subtitle">Pakaian</p>
                     </div>
                 </div>
 
-                <div class="card bg-white rounded-xl shadow-lg overflow-hidden relative group">
-                    <img src="{{ asset('storage/images/rumah-adat.jpg') }}" alt="Rumah Adat Daerah" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105">
-                    <div class="p-4">
-                        <h4 class="font-bold text-lg mb-1">Rumah Adat Daerah</h4>
-                        <p class="text-sm text-gray-500">Arsitektur</p>
+                <div class="card">
+                    <img src="{{ asset('images/budaya_asset/rumahadat.jpg') }}" alt="Rumah Adat Daerah" class="card-image">
+                    <div class="card-content">
+                        <h4 class="card-title">Rumah Adat Daerah</h4>
+                        <p class="card-subtitle">Arsitektur</p>
                     </div>
                 </div>
 
-                <div class="card bg-white rounded-xl shadow-lg overflow-hidden relative group">
-                    <img src="{{ asset('storage/images/warisan-budaya.jpg') }}" alt="Warisan Budaya Wayang" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105">
-                    <div class="p-4">
-                        <h4 class="font-bold text-lg mb-1">Warisan Budaya Wayang</h4>
-                        <p class="text-sm text-gray-500">Kesenian</p>
+                <div class="card">
+                    <img src="{{ asset('images/budaya_asset/warisanbudaya.jpg') }}" alt="Warisan Budaya Wayang" class="card-image">
+                    <div class="card-content">
+                        <h4 class="card-title">Warisan Budaya Wayang</h4>
+                        <p class="card-subtitle">Kesenian</p>
                     </div>
                 </div>
                 
-                <div class="card bg-white rounded-xl shadow-lg overflow-hidden relative group">
-                    <img src="{{ asset('storage/images/batik-tenun.jpg') }}" alt="Warisan Batik & Tenun" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105">
-                    <div class="p-4">
-                        <h4 class="font-bold text-lg mb-1">Warisan Batik & Tenun</h4>
-                        <p class="text-sm text-gray-500">Pakaian</p>
+                <div class="card">
+                    <img src="{{ asset('images/budaya_asset/batiktenun.jpg') }}" alt="Warisan Batik & Tenun" class="card-image">
+                    <div class="card-content">
+                        <h4 class="card-title">Warisan Batik & Tenun</h4>
+                        <p class="card-subtitle">Pakaian</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section: Jelajahi Lainnya -->
         <section class="my-12 text-center max-w-6xl mx-auto px-4 py-8">
-            <h3 class="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-8">Jelajahi lainnya</h3>
-            <div class="flex flex-wrap justify-center gap-4">
+            <h3 class="section-title">Jelajahi lainnya
+                <div class="title-underline"></div>
+            </h3>
+            <div class="button-container">
                 <a href="#" class="btn-secondary">Ragam Budaya Nusantara</a>
                 <a href="#" class="btn-secondary">Bahasa & Aksara Daerah</a>
                 <a href="#" class="btn-secondary">Tradisi & Upacara Adat</a>

@@ -1,0 +1,230 @@
+/* Menggunakan variabel warna yang sama */
+:root {
+    --nusaya-green: #4CB073;
+    --nusaya-text: #395B3B;
+    --nusaya-bg: #F7F7F0;
+    --aura-blue: #40567F;
+    --aura-green: #33675B;
+    --nusaya-dark-blue: #191D43;
+}
+
+/* Gaya Dasar */
+body {
+    background-color: var(--nusaya-bg);
+    color: var(--nusaya-text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.main-content {
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Judul Bagian */
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--nusaya-text);
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 2rem;
+}
+
+.section-title span {
+    color: var(--nusaya-green);
+}
+
+.title-underline {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--nusaya-green);
+    border-radius: 2px;
+}
+
+/* Bagian Hero (TIDAK ADA PERUBAHAN) */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 16px;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+}
+
+.hero-text {
+    margin-bottom: 24px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--nusaya-text);
+    line-height: 1.2;
+}
+
+.hero-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--nusaya-text);
+    margin: 16px auto 24px auto;
+    max-width: 600px;
+}
+
+.hero-images {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 24px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.grid-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Tombol (PENYEMPURNAAN) */
+.btn-interactive, .btn-secondary {
+    display: inline-block;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    text-decoration: none;
+    color: white;
+    background-color: var(--nusaya-green);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-interactive:hover, .btn-secondary:hover {
+    background-color: var(--aura-green);
+    transform: translateY(-2px);
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Bagian Kartu Budaya (PENYEMPURNAAN SESUAI GAMBAR BARU) */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 40px 16px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    height: 350px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Lapisan penggelap */
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%);
+    z-index: 2;
+    border-radius: 12px;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: white;
+    text-align: left;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: white;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+/* Responsif */
+@media (min-width: 768px) {
+    .hero-section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 64px 32px;
+    }
+
+    .hero-text {
+        max-width: 45%;
+        margin-right: 48px;
+        margin-bottom: 0;
+    }
+
+    .hero-images {
+        max-width: 50%;
+        margin-top: 0;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+}
