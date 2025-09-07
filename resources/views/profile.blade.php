@@ -4,12 +4,14 @@
         background-color: #f0f2f5;
         margin: 0;
         padding: 0;
+        /* Tambahkan padding di sini. Sesuaikan ukurannya */
+
     }
 
     .container {
         max-width: 960px;
-        margin: 40px auto;
-        padding: 20px;
+        margin: 0 auto 40px;
+        padding: 15vh;
         background-color: white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
@@ -151,7 +153,25 @@
         color: #777;
         font-size: 14px;
     }
+
+    .logout-btn {
+        background-color: #dc3545;
+        /* Merah */
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .logout-btn:hover {
+        background-color: #c82333;
+    }
 </style>
+
 
 @extends('layouts.app')
 
@@ -159,6 +179,12 @@
     <div class="container">
         <div class="header">
             <a href="/" class="back-link">&larr; Kembali</a>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="logout-btn">
+                    Logout
+                </button>
+            </form>
         </div>
         <div class="profile-card">
             <h2>Halo {{ $user->name }}!</h2>

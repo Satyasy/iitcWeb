@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ChatbotController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BudayaController;
 use App\Http\Controllers\ExploreController; // Pastikan ini ada
 
 Route::get('/', function () {
@@ -22,10 +23,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/chatbot', function () {
         return view('chatbot');
     })->name('chatbot');
-    
+
     // BARIS INI AKAN MEMANGGIL CONTROLLER YANG MENGIRIM DATA DARI DATABASE
     Route::get('/explore', [ExploreController::class, 'index'])->name('explore');
-  
+    Route::get('/budaya', [BudayaController::class, 'index'])->name('budaya.ragam');
+    Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+
 
 
     // API chatbot

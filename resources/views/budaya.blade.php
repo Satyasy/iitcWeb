@@ -4,7 +4,7 @@
 
 {{-- Menghubungkan file CSS khusus untuk halaman ini --}}
 @push('head')
-<link rel="stylesheet" href="{{ asset('css/budaya.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/budaya.css') }}">
 @endpush
 
 @section('content')
@@ -13,7 +13,8 @@
             <div class="hero-text">
                 <h1 class="hero-title">Ragam Budaya Nusantara</h1>
                 <p class="hero-description">
-                    Jelajahi kekayaan budaya Indonesia, dari tarian, musik, rumah adat, kesenian, hingga warisan batik & tenun.
+                    Jelajahi kekayaan budaya Indonesia, dari tarian, musik, rumah adat, kesenian, hingga warisan batik &
+                    tenun.
                 </p>
                 <a href="#" class="btn-interactive">Jelajahi Sekarang</a>
             </div>
@@ -32,53 +33,20 @@
                 <div class="title-underline"></div>
             </h3>
             <div class="card-grid">
-                <div class="card">
-                    <img src="{{ asset('images/budaya_asset/taritradisional.png') }}" alt="Tari Tradisional" class="card-image">
-                    <div class="card-content">
-                        <h4 class="card-title">Tari Tradisional</h4>
-                        <p class="card-subtitle">Kesenian</p>
+                @forelse($budayas as $budaya)
+                    <div class="card">
+                        <a href="/budaya/{{ $budaya->id }}">
+                            <img src="{{ asset('images/budayas/' . $budaya->gambar) }}" alt="{{ $budaya->judul }}"
+                                class="card-image">
+                        </a>
+                        <div class="card-content">
+                            <h4 class="card-title">{{ $budaya->judul }}</h4>
+                            <p class="card-subtitle">{{ $budaya->kategori }}</p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="card">
-                    <img src="{{ asset('images/budaya_asset/alatmusiktradisional.avif') }}" alt="Alat Musik Tradisional" class="card-image">
-                    <div class="card-content">
-                        <h4 class="card-title">Alat Musik Tradisional</h4>
-                        <p class="card-subtitle">Kesenian</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="{{ asset('images/budaya_asset/pakaianadat.png') }}" alt="Pakaian Adat Daerah" class="card-image">
-                    <div class="card-content">
-                        <h4 class="card-title">Pakaian Adat Daerah</h4>
-                        <p class="card-subtitle">Pakaian</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="{{ asset('images/budaya_asset/rumahadat.jpg') }}" alt="Rumah Adat Daerah" class="card-image">
-                    <div class="card-content">
-                        <h4 class="card-title">Rumah Adat Daerah</h4>
-                        <p class="card-subtitle">Arsitektur</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="{{ asset('images/budaya_asset/warisanbudaya.jpg') }}" alt="Warisan Budaya Wayang" class="card-image">
-                    <div class="card-content">
-                        <h4 class="card-title">Warisan Budaya Wayang</h4>
-                        <p class="card-subtitle">Kesenian</p>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <img src="{{ asset('images/budaya_asset/batiktenun.jpg') }}" alt="Warisan Batik & Tenun" class="card-image">
-                    <div class="card-content">
-                        <h4 class="card-title">Warisan Batik & Tenun</h4>
-                        <p class="card-subtitle">Pakaian</p>
-                    </div>
-                </div>
+                @empty
+                    <p>Tidak ada data budaya yang tersedia saat ini.</p>
+                @endforelse
             </div>
         </section>
 

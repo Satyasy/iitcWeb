@@ -1,61 +1,111 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Nusantara Explorer
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplikasi web untuk menjelajahi kekayaan kuliner, budaya, dan informasi pariwisata Nusantara. Proyek ini dibangun menggunakan framework PHP Laravel dan _tools_ frontend modern.
 
-## About Laravel
+## Daftar Isi
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- [Nusantara Explorer](#nusantara-explorer)
+  - [Daftar Isi](#daftar-isi)
+  - [Fitur Utama](#fitur-utama)
+  - [Prasyarat](#prasyarat)
+  - [Panduan Instalasi](#panduan-instalasi)
+  - [Menjalankan Aplikasi](#menjalankan-aplikasi)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Fitur Utama
 
-## Learning Laravel
+-   **Halaman Jelajah (Explore):** Menampilkan ringkasan data makanan, artikel, pustaka, dan _event_ terbaru.
+-   **Halaman Budaya:** Menampilkan daftar kekayaan budaya (tari, musik, pakaian adat, dll.) yang diambil secara dinamis dari _database_.
+-   **Sistem Otentikasi:** Fungsionalitas _login_ dan _register_ untuk pengguna.
+-   **Halaman Profil Pengguna:** Menampilkan data profil pengguna, termasuk nama dan email.
+-   **_Chatbot_:** Fitur interaktif untuk menjawab pertanyaan seputar Nusantara.
+-   **Manajemen _Asset_:** Menggunakan `npm` untuk mengelola dan mengompilasi file CSS dan JavaScript.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Prasyarat
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Pastikan Anda telah menginstal _software_ berikut di komputer Anda:
 
-## Laravel Sponsors
+-   **PHP** (versi 8.1 atau lebih tinggi)
+-   **Composer**
+-   **Node.js** & **npm**
+-   **Git**
+-   **Database** (MySQL, PostgreSQL, atau SQLite)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## Panduan Instalasi
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Ikuti langkah-langkah di bawah ini untuk menyiapkan proyek di lingkungan lokal Anda.
 
-## Contributing
+1.  **Kloning Repositori**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    ```bash
+    git clone [URL_REPOSITORI_ANDA]
+    cd nama-proyek
+    ```
 
-## Code of Conduct
+2.  **Instalasi Dependensi PHP**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    Gunakan Composer untuk menginstal semua pustaka backend Laravel.
 
-## Security Vulnerabilities
+    ```bash
+    composer install
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+3.  **Konfigurasi Lingkungan**
 
-## License
+    Buat file `.env` dengan menyalin file `.env.example`.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    ```bash
+    cp .env.example .env
+    ```
+
+4.  **Generasi Kunci Aplikasi**
+
+    ```bash
+    php artisan key:generate
+    ```
+
+5.  **Konfigurasi Database**
+
+    Buka file `.env` dan atur detail koneksi _database_ Anda.
+
+    ```dotenv
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=nama_database_anda
+    DB_USERNAME=username_database_anda
+    DB_PASSWORD=password_database_anda
+    ```
+
+6.  **Jalankan Migrasi Database**
+
+    Ini akan membuat tabel-tabel di _database_ Anda.
+
+    ```bash
+    php artisan migrate
+    ```
+
+7.  **Instalasi dan Kompilasi _Asset_ Frontend**
+
+    Gunakan npm untuk menginstal dependensi JavaScript dan mengompilasi CSS/JS.
+
+    ```bash
+    npm install
+    npm run dev  # atau npm run build untuk produksi
+    ```
+
+    Jika Anda mengalami error `Asset not found`, pastikan Anda sudah menjalankan perintah ini dan file CSS/JS ada di folder `public`.
+
+---
+
+## Menjalankan Aplikasi
+
+Jalankan perintah berikut untuk memulai server pengembangan Laravel:
+
+```bash
+php artisan serve
