@@ -8,6 +8,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\FileUpload;
 use App\Filament\Resources\MakananResource\Pages;
+use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\MakananResource\RelationManagers;
 use App\Models\Makanan;
 use Filament\Tables\Columns\TextColumn;
@@ -17,7 +18,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class MakananResource extends Resource
@@ -26,6 +27,7 @@ class MakananResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Manajemen Budaya';
+
 
     public static function form(Form $form): Form
     {
@@ -51,7 +53,11 @@ class MakananResource extends Resource
                     ->required()
                     ->searchable()
                     ->preload()
-                    ->label('Asal Daerah'),
+                    ->label('Asal Daerah')
+                    ->required()
+                    ->default('pending')
+                    ->visible(fn() => Auth::user()->role === 'admin') // Hanya admin yang bisa melihat
+                    ->label('Status Verifikasi'),
                 FileUpload::make('foto')
                     ->image()
                     ->disk('public')
