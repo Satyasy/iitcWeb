@@ -21,6 +21,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/chatbot', function () {
         return view('chatbot');
     })->name('chatbot');
+ 
+Route::middleware('budaya')->group(function () {
+    Route::get('/budaya', function () {
+        return view('budaya');
+    })->name('budaya');
+  
+Route::middleware('auth')->group(function () {
+    Route::get('/explore', function () {
+        return view('explore');
+    })->name('explore');
 
     // API chatbot
     Route::post('/chatbot/ask', [ChatbotController::class, 'ask'])->name('chatbot.ask');
