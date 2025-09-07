@@ -5,6 +5,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ChatbotController;
+use App\Http\Controllers\ProfileController;
+
 
 
 Route::get('/', function () {
@@ -24,3 +26,5 @@ Route::post('/chatbot/ask', [ChatbotController::class, 'ask'])->name('chatbot.as
 
 // Route untuk mendapatkan quick ask suggestions
 Route::get('/chatbot/quick-ask', [ChatbotController::class, 'getQuickAsk'])->name('chatbot.quickask');
+
+Route::get('/profile', [ProfileController::class, 'show'])->middleware('auth');
