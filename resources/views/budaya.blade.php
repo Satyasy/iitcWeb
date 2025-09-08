@@ -4,7 +4,7 @@
 
 {{-- Menghubungkan file CSS khusus untuk halaman ini --}}
 @push('head')
-<link rel="stylesheet" href="{{ asset('css/budaya.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/budaya.css') }}">
 @endpush
 
 @section('content')
@@ -77,7 +77,7 @@
                     <div class="budaya-card-content">
                         <h4 class="budaya-card-title">Warisan Batik & Tenun</h4>
                         <p class="budaya-card-subtitle">Pakaian</p>
-                    </div>
+                   </div>
                 </div>
             </div>
         </section>

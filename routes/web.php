@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 // use App\Http\Controllers\BudayaController;
 // use App\Http\Controllers\ExploreController; // Pastikan ini ada
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -35,6 +36,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/explore', function () {
         return view('explore');
     })->name('explore');
+
 
             Route::get('/ragam', function () {
         return view('ragam');
