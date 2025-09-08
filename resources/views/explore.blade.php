@@ -45,7 +45,7 @@
                 </div>
             </a>
         </div>
-        <a href="/explore/kuliner" class="explore-btn-primary">Jelajahi Kuliner Lainnya</a>
+        <a href="/ragam" class="explore-btn-primary">Jelajahi Kuliner Lainnya</a>
     </section>
 
     <section class="explore-articles-section">
@@ -100,7 +100,7 @@
                 </div>
             </a>
         </div>
-        <a href="/explore/artikel" class="explore-btn-primary">Baca Artikel Lainnya</a>
+        <a href="/ragam" class="explore-btn-primary">Baca Artikel Lainnya</a>
     </section>
 
     <section class="explore-pustaka-section">
@@ -135,7 +135,7 @@
                 </div>
             </a>
         </div>
-        <a href="/explore/pustaka" class="explore-btn-primary">Jelajahi Pustaka</a>
+        <a href="/ragam" class="explore-btn-primary">Jelajahi Pustaka</a>
     </section>
 
     <section class="explore-event-section">
@@ -156,7 +156,7 @@
                 </div>
             </a>
         </div>
-        <a href="/explore/event" class="explore-btn-primary">Jelajahi Event Budaya Nusantara</a>
+        <a href="/ragam" class="explore-btn-primary">Jelajahi Event Budaya Nusantara</a>
     </section>
 </main>
 @endsection

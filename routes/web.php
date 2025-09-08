@@ -5,6 +5,8 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ChatbotController;
 use App\Http\Controllers\ProfileController;
+// use App\Http\Controllers\BudayaController;
+// use App\Http\Controllers\ExploreController; // Pastikan ini ada
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,16 +23,28 @@ Route::middleware('auth')->group(function () {
     Route::get('/chatbot', function () {
         return view('chatbot');
     })->name('chatbot');
- 
-Route::middleware('budaya')->group(function () {
+
+    // BARIS INI AKAN MEMANGGIL CONTROLLER YANG MENGIRIM DATA DARI DATABASE
+    // Route::get('/explore', [ExploreController::class, 'index'])->name('explore');
+    // Route::get('/budaya', [BudayaController::class, 'index'])->name('budaya.ragam');
+    Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
     Route::get('/budaya', function () {
         return view('budaya');
     })->name('budaya');
-  
-Route::middleware('auth')->group(function () {
-    Route::get('/explore', function () {
+
+        Route::get('/explore', function () {
         return view('explore');
     })->name('explore');
+
+            Route::get('/ragam', function () {
+        return view('ragam');
+    })->name('ragam');
+
+                Route::get('/detail', function () {
+        return view('detail');
+    })->name('detail');
+
+
 
     // API chatbot
     Route::post('/chatbot/ask', [ChatbotController::class, 'ask'])->name('chatbot.ask');
