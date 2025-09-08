@@ -24,10 +24,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/chatbot', function () {
         return view('chatbot');
     })->name('chatbot');
-
-    // BARIS INI AKAN MEMANGGIL CONTROLLER YANG MENGIRIM DATA DARI DATABASE
-    // Route::get('/explore', [ExploreController::class, 'index'])->name('explore');
-    // Route::get('/budaya', [BudayaController::class, 'index'])->name('budaya.ragam');
     Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
     Route::get('/budaya', function () {
         return view('budaya');

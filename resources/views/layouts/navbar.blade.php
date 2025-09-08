@@ -4,6 +4,8 @@
             <div class="logo">
                 <a href="/">
                     <img src="{{ asset('images/logo1.png') }}" alt="Nusaya Logo" class="logo-img">
+                    <img src="{{ asset('images/LOGO IITC 2025.png') }}" alt="Nusaya Logo" class="logo-img logo-img-large"
+                        style="width: 100px; height: auto;">
                 </a>
             </div>
 
@@ -17,6 +19,7 @@
                 <a href="/" class="nav-link">Beranda</a>
                 <a href="/explore" class="nav-link">Explore</a>
                 <a href="/budaya" class="nav-link">Budaya</a>
+                <a href="/ragam" class="nav-link">Ragam</a>
                 @guest
                     <a href="/login" class="btn-login-mobile">Login</a>
                 @endguest

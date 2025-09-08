@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @push('head')
-<link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
 @endpush
 
 @section('content')
@@ -35,23 +35,23 @@
                 Satu klik untuk ribuan tradisi, kuliner, dan seni Nusantara.
             </p>
             <div class="explore-categories">
-                <a href="/budaya/ragam" class="category-item">
+                <a href="/ragam" class="category-item">
                     <img src="{{ asset('images/welcome_asset/exploresec1.png') }}" alt="Ragam Budaya" class="category-icon">
                     <span class="category-name">Ragam Budaya</span>
                 </a>
-                <a href="/budaya/kuliner" class="category-item">
+                <a href="/ragam" class="category-item">
                     <img src="{{ asset('images/welcome_asset/exploresec2.png') }}" alt="Kuliner" class="category-icon">
                     <span class="category-name">Kuliner</span>
                 </a>
-                <a href="/budaya/event" class="category-item">
+                <a href="/ragam" class="category-item">
                     <img src="{{ asset('images/welcome_asset/exploresec3.png') }}" alt="Event" class="category-icon">
                     <span class="category-name">Event</span>
                 </a>
-                <a href="/explore/artikel" class="category-item">
+                <a href="/ragam" class="category-item">
                     <img src="{{ asset('images/welcome_asset/exploresec4.png') }}" alt="Artikel" class="category-icon">
                     <span class="category-name">Artikel</span>
                 </a>
-                <a href="/budaya/pustaka" class="category-item">
+                <a href="/ragam" class="category-item">
                     <img src="{{ asset('images/welcome_asset/exploresec5.png') }}" alt="Pustaka" class="category-icon">
                     <span class="category-name">Pustaka</span>
                 </a>
