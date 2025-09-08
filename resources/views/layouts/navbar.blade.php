@@ -4,7 +4,7 @@
             <div class="logo">
                 <a href="/">
                     <img src="{{ asset('images/logo1.png') }}" alt="Nusaya Logo" class="logo-img">
-                    <img src="{{ asset('images/LOGO IITC 2025.png') }}" alt="Nusaya Logo" class="logo-img logo-img-large"
+                    <img src="{{ asset('images/LOGO IITC 2025.png') }}" alt="IITC Logo" class="logo-img logo-img-large"
                         style="width: 100px; height: auto;">
                 </a>
             </div>
