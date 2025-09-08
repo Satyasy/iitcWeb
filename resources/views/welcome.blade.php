@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@push('head')
+<link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
+@endpush
+
 @section('content')
     <main class="main-content">
         <section class="hero-section">

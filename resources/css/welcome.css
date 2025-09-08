@@ -3,14 +3,13 @@
     --nusaya-text: #395B3B;
     --nusaya-bg: #F7F7F0;
     --nusaya-light-green: #E5F0D9;
-
     --aura-blue: #40567F;
     --aura-green: #33675B;
-    --nusaya-dark-blue: #191D43; 
+    --nusaya-dark-blue: #191D43;
 }
 
 body {
-    background-color: white; 
+    background-color: white;
 }
 
 .main-content {
@@ -25,7 +24,7 @@ body {
     color: var(--nusaya-text);
     text-align: center;
     position: relative;
-    padding-bottom: 15px; 
+    padding-bottom: 15px;
     margin-bottom: 8px;
 }
 
@@ -35,8 +34,8 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px; 
-    height: 4px; 
+    width: 80px;
+    height: 4px;
     background: linear-gradient(90deg, var(--nusaya-green) 0%, var(--aura-green) 100%);
     border-radius: 2px;
 }
@@ -47,19 +46,20 @@ body {
     align-items: center;
     text-align: center;
     padding: 40px 16px;
-    background-color: white; 
+    background-color: white;
 }
 
 .hero-text {
     margin-bottom: 24px;
 }
 
+/* Penyesuaian font-size untuk judul hero agar lebih proporsional */
 .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Ukuran font lebih kecil untuk mobile */
     font-weight: bold;
     color: var(--nusaya-text);
     line-height: 1.2;
-    transition: color 0.3s ease-in-out; 
+    transition: color 0.3s ease-in-out;
 }
 
 .hero-title:hover {
@@ -71,7 +71,7 @@ body {
     line-height: 1.5;
     color: var(--nusaya-text);
     margin: 16px auto 24px auto;
-    max-width: 600px; 
+    max-width: 600px;
 }
 
 .hero-images {
@@ -97,7 +97,7 @@ body {
 
 .grid-image:hover {
     transform: translateY(-8px) scale(1.03);
-    box-shadow: 
+    box-shadow:
         0 8px 20px rgba(0, 0, 0, 0.2),
         0 0 15px var(--aura-blue),
         0 0 25px var(--aura-green);
@@ -306,6 +306,7 @@ body {
     margin: 0 auto;
 }
 
+/* Responsif untuk tablet dan desktop */
 @media (min-width: 768px) {
     .hero-section {
         flex-direction: row;
@@ -327,7 +328,7 @@ body {
     }
 
     .hero-title {
-        font-size: 3rem;
+        font-size: 3rem; /* Ukuran font desktop */
     }
 
     .explore-section {
@@ -337,7 +338,7 @@ body {
     .content-section {
         padding: 64px 32px;
     }
-    
+
     .content-cards-container {
         flex-direction: column;
     }
@@ -359,7 +360,7 @@ body {
         border-top-left-radius: 12px;
         border-bottom-left-radius: 12px;
     }
-    
+
     .card:nth-child(even) .card-image-box {
         border-radius: 0;
         border-top-right-radius: 12px;
@@ -380,7 +381,7 @@ body {
 
 @media (min-width: 1024px) {
     .hero-title {
-        font-size: 4rem;
+        font-size: 4rem; /* Ukuran font desktop yang lebih besar */
     }
 
     .explore-categories {
@@ -397,4 +398,3 @@ body {
         height: 180px;
     }
 }
-

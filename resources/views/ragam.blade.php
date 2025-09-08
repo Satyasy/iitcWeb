@@ -2,7 +2,6 @@
 
 @section('title', 'Ragam Nusantara')
 
-{{-- Menghubungkan file CSS khusus untuk halaman ini --}}
 @push('head')
 <link rel="stylesheet" href="{{ asset('css/ragam.css') }}">
 @endpush
@@ -17,19 +16,19 @@
                 <p class="hero-description">
                     Eksplor keindahan kebudayaan kita yang memberi warna pada kebinekaan
                 </p>
-                <div class="hero-image-grid">
-                    <img src="{{ asset('images/ragam_asset/wayang.jpg') }}" alt="Wayang Kulit" class="hero-image">
-                    <img src="{{ asset('images/ragam_asset/batik.jpg') }}" alt="Motif Batik" class="hero-image">
-                    <img src="{{ asset('images/ragam_asset/bali.jpg') }}" alt="Tari Bali" class="hero-image">
-                    <img src="{{ asset('images/ragam_asset/rumah_adat.jpg') }}" alt="Rumah Adat" class="hero-image">
-                </div>
+                <a href="#ragam-budaya" class="btn-interactive">Jelajahi Sekarang</a>
             </div>
-            <div class="hero-main-image">
-                <img src="{{ asset('images/ragam_asset/hero_utama.jpg') }}" alt="Main Hero" class="hero-main-image-inner">
+            <div class="hero-image-gallery">
+                <img src="{{ asset('images/ragam_asset/wayang.webp') }}" alt="Wayang Kulit" class="gallery-image large">
+                <img src="{{ asset('images/ragam_asset/batik.jpg') }}" alt="Motif Batik" class="gallery-image small">
+                <img src="{{ asset('images/ragam_asset/bali.jpg') }}" alt="Tari Bali" class="gallery-image small">
+                <img src="{{ asset('images/ragam_asset/rumah_adat.jpg') }}" alt="Rumah Adat" class="gallery-image small">
             </div>
         </section>
 
-        <section class="py-12 px-4 md:px-8">
+        ---
+
+        <section id="ragam-budaya" class="py-12 px-4 md:px-8">
             <h3 class="section-title">
                 Ragam Budaya <span>Nusantara</span>
                 <div class="title-underline"></div>
@@ -45,7 +44,7 @@
                     </div>
                 </a>
                 <a href="/explore/detail/2" class="card">
-                    <img src="{{ asset('images/ragam_asset/candi.jpg') }}" alt="Candi Prambanan" class="card-image">
+                    <img src="{{ asset('images/ragam_asset/candi_prambanan.avif') }}" alt="Candi Prambanan" class="card-image">
                     <div class="card-content">
                         <span class="card-category">Peninggalan Budaya</span>
                         <h4 class="card-title">Candi Prambanan</h4>
@@ -53,7 +52,7 @@
                     </div>
                 </a>
                 <a href="/explore/detail/3" class="card">
-                    <img src="{{ asset('images/ragam_asset/batik_megamendung.jpg') }}" alt="Batik Megamendung" class="card-image">
+                    <img src="{{ asset('images/ragam_asset/batik.jpg') }}" alt="Batik Megamendung" class="card-image">
                     <div class="card-content">
                         <span class="card-category">Kain Tradisional</span>
                         <h4 class="card-title">Batik Megamendung</h4>
@@ -62,6 +61,8 @@
                 </a>
             </div>
         </section>
+
+        ---
 
         <section class="py-12 px-4 md:px-8">
             <h3 class="section-title">
@@ -79,7 +80,7 @@
                     </div>
                 </a>
                 <a href="/explore/detail/5" class="card">
-                    <img src="{{ asset('images/ragam_asset/sate.jpg') }}" alt="Sate Madura" class="card-image">
+                    <img src="{{ asset('images/ragam_asset/sate_madura.jpg') }}" alt="Sate Madura" class="card-image">
                     <div class="card-content">
                         <span class="card-category">Makanan Khas Madura</span>
                         <h4 class="card-title">Sate Madura</h4>
@@ -87,7 +88,7 @@
                     </div>
                 </a>
                 <a href="/explore/detail/6" class="card">
-                    <img src="{{ asset('images/ragam_asset/soto.jpg') }}" alt="Soto" class="card-image">
+                    <img src="{{ asset('images/ragam_asset/soto.webp') }}" alt="Soto" class="card-image">
                     <div class="card-content">
                         <span class="card-category">Makanan Khas Nusantara</span>
                         <h4 class="card-title">Soto</h4>
@@ -97,6 +98,8 @@
             </div>
         </section>
 
+        ---
+
         <section class="py-12 px-4 md:px-8">
             <h3 class="section-title">
                 Ragam Artikel <span>Nusantara</span>
@@ -105,7 +108,7 @@
             <div class="card-grid">
                 <!-- Contoh Kartu Artikel (Statik) -->
                 <a href="/explore/detail/7" class="card">
-                    <img src="{{ asset('images/ragam_asset/pakaian_adat.jpg') }}" alt="Pakaian Adat" class="card-image">
+                    <img src="{{ asset('images/ragam_asset/pakaian_adat.png') }}" alt="Pakaian Adat" class="card-image">
                     <div class="card-content">
                         <span class="card-category">Artikel</span>
                         <h4 class="card-title">Pakaian Adat Daerah</h4>
@@ -121,7 +124,7 @@
                     </div>
                 </a>
                 <a href="/explore/detail/9" class="card">
-                    <img src="{{ asset('images/ragam_asset/gunungan.jpg') }}" alt="Gunungan Wayang" class="card-image">
+                    <img src="{{ asset('images/ragam_asset/gunungan_wayang.jpg') }}" alt="Gunungan Wayang" class="card-image">
                     <div class="card-content">
                         <span class="card-category">Artikel</span>
                         <h4 class="card-title">Mengenal Gunungan Wayang</h4>
@@ -130,6 +133,5 @@
                 </a>
             </div>
         </section>
-
     </main>
 @endsection
