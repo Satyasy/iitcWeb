@@ -8,15 +8,15 @@ return new class extends Migration {
     /**
      * Run the migrations.
      */
-    public function up(): void
-    {
-        Schema::create('lokasis', function (Blueprint $table) {
-            $table->increments('lokasi_id');
-            $table->string('nama');
-            $table->string('alamat');
-            $table->timestamps();
-        });
-    }
+public function up(): void
+{
+    Schema::create('lokasis', function (Blueprint $table) {
+        $table->bigIncrements('lokasi_id'); // PERUBAHAN DI SINI
+        $table->string('nama');
+        $table->string('alamat');
+        $table->timestamps();
+    });
+}
 
     /**
      * Reverse the migrations.
