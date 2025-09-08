@@ -1,1 +1,9 @@
 import './bootstrap';
+import '../css/app.css';
+import '../css/layout.css';
+import '../css/artikel.css';
+import '../css/budaya.css';
+import '../css/detail.css';
+import '../css/explore.css';
+import '../css/ragam.css';
+import '../css/welcome.css';
