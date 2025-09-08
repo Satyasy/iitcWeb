@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('events', function (Blueprint $table) {
-            $table->increments('event_id');
+            $table->BigIncrements('event_id');
             $table->string('nama');
             $table->string('foto')->nullable();
             $table->text('deskripsi');

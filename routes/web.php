@@ -33,16 +33,16 @@ Route::middleware('auth')->group(function () {
         return view('budaya');
     })->name('budaya');
 
-        Route::get('/explore', function () {
+    Route::get('/explore', function () {
         return view('explore');
     })->name('explore');
 
 
-            Route::get('/ragam', function () {
+    Route::get('/ragam', function () {
         return view('ragam');
     })->name('ragam');
 
-                Route::get('/detail', function () {
+    Route::get('/detail', function () {
         return view('detail');
     })->name('detail');
 

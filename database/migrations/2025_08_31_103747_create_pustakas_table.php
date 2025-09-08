@@ -12,7 +12,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('pustakas', function (Blueprint $table) {
-            $table->increments('pustaka_id');
+            $table->BigIncrements('pustaka_id');
             $table->string('judul');
             $table->string('author')->default('anonim');
             $table->string('tema')->nullable();

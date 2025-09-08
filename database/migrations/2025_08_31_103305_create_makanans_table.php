@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('makanans', function (Blueprint $table) {
-            $table->increments('makanan_id');
+            $table->BigIncrements('makanan_id');
             $table->string('foto')->nullable();
             $table->string('nama');
             // Hapus ->after('nama') dari baris di bawah ini

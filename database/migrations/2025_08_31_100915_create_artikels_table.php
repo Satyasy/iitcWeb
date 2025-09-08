@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('artikels', function (Blueprint $table) {
-            $table->increments('artikel_id');
+            $table->BigIncrements('artikel_id');
             $table->string('title');
             $table->text('content');
             $table->string('penulis')->default('anonim');

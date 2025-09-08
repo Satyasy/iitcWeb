@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('user_id');
+            $table->BigIncrements('user_id');
             $table->string('name')->unique()->nullable();
             $table->string('email')->unique();
             $table->enum('role', ['admin', 'kurator', 'publik'])->default('admin');
